@@ -1,9 +1,8 @@
-import Home from "./home/page";
-
-export default function App() {
+export default function Home() {
   return (
     <div className="flex items-center justify-center min-h-screen">
-     <Home />
+      <h1>Hi</h1>
+      <h1>this is home page</h1>
     </div>
   );
 }
