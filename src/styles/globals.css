@@ -1,1 +1,25 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* globals.css ya apne css file me daal */
+/* globals.css */
+
+/* Swiper Button Customization */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: 'next';       /* tu icon/text replace bhi kar sakta hai */
+ font-weight: 600;
+  font-size: 12px !important;
+  color: black;
+}
+
+/* Agar left button bhi chahiye */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+font-weight: 600;
+color: black;
+  font-size: 12px !important;
+}
+
