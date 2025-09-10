@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
 export default function HomePage() {
   return (
     <main className="min-h-screen font-sans text-gray-900 bg-white">
@@ -133,6 +134,74 @@ export default function HomePage() {
   </div>
 </section>
 
+{/* about section */}
+
+<section className="relative bg-gradient-to-r from-purple-50 to-blue-50 py-20 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+    
+    {/* Left Image - Circle */}
+    <motion.div
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="flex justify-center"
+    >
+      <Image
+        src="https://toposel.com/wp-content/uploads/2025/07/entertainer-presenting-tablet-from-sponsor-1.webp"
+        alt="Author Image Left"
+        width={380}
+        height={380}
+        className="rounded-full object-cover shadow-lg"
+      />
+    </motion.div>
+
+    {/* Text Center */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="text-center lg:text-left"
+    >
+      <h2 className="text-4xl font-extrabold text-gray-900 leading-tight">
+        Unbeatable Growth Solutions
+      </h2>
+      <p className="mt-4 text-lg text-gray-600">
+        Toposel is a data led growth marketing agency which provides the best
+        in class services to help your business grow across the digital vertical.
+        Our core is data and is backed by creativity and AI.
+      </p>
+
+      <motion.a
+        href="#"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:shadow-xl transition"
+      >
+        Contact Us <span className="text-xl">➜</span>
+      </motion.a>
+    </motion.div>
+
+    {/* Right Image - Rounded Rectangle */}
+    <motion.div
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="flex justify-center"
+    >
+      <Image
+        src="https://toposel.com/wp-content/uploads/2025/07/Frame-1437254183.webp"
+        alt="Author Image Right"
+        width={380}
+        height={460}
+        className="rounded-3xl object-cover shadow-lg"
+      />
+    </motion.div>
+  </div>
+</section>
+
 
 
 
@@ -190,6 +259,7 @@ export default function HomePage() {
 
    {/* rrr */}
    {/* BEST-IN-CLASS GROWTH SERVICES SECTION */}
+{/* BEST-IN-CLASS GROWTH SERVICES SECTION */}
 <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
   <motion.h2
     initial={{ opacity: 0, y: 30 }}
@@ -252,6 +322,7 @@ export default function HomePage() {
     ))}
   </div>
 </section>
+
 
 
       {/* WHY CHOOSE US */}
