@@ -7,6 +7,9 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import OurPlatforms from "./OurPlatforms";
+import BlogSection from "./BlogSection";
+import GoogleReviews from "./GoogleReviews";
 
 
 
@@ -17,16 +20,34 @@ export default function HomePage() {
  <section className="relative w-screen h-screen bg-gradient-to-r from-white to-slate-50 overflow-hidden flex items-center">
   <div className="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
     
+    
+
     {/* Left Content */}
+    
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 1, y: 40 }}
+      animate={{ opacity: 1, y: 1 }}
       transition={{ duration: 1 }}
-      className="space-y-6"
-    >
-      <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-black">
-        Empowering Digital Solutions for Your Business
-      </h1>
+      className="space-y-6 z-10">
+         <motion.div
+        animate={{ y: [0, -18, 0] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        className="absolute bottom-58 -left-40 "
+      >
+
+        <Image
+          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-120.webp"
+          alt="Author"
+          width={180}
+          height={180}
+          className=""
+        />
+      </motion.div>
+        
+    <h1 className="text-[64px] font-semibold leading-[65px] text-[#090B0E]">
+  Empowering Digital Solutions for Your Business
+</h1>
+
       <p className="text-lg text-gray-600 max-w-xl">
         Build, scale and transform your business with our innovative
         digital products and services.
@@ -35,13 +56,13 @@ export default function HomePage() {
       <div className="flex flex-wrap gap-3 items-center">
         <a
           href="#"
-          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
+          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-full shadow hover:shadow-lg transition"
         >
           Get started
         </a>
         <a
           href="#"
-          className="inline-flex items-center gap-2 border border-gray-300 text-gray-800 px-4 py-3 rounded-lg hover:bg-gray-100"
+          className="inline-flex items-center gap-2 border border-gray-300 text-gray-800 px-4 py-3 rounded-full hover:bg-indigo-600 hover:text-white"
         >
           Learn more
         </a>
@@ -71,16 +92,16 @@ export default function HomePage() {
 
       {/* Floating Elements */}
       <motion.div
-        animate={{ y: [0, -15, 0] }}
+        animate={{ x: [0, -18, 0] }}
         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute -bottom-8 -left-10"
+        className="absolute -bottom-12 -left-30 "
       >
         <Image
           src="https://toposel.com/wp-content/uploads/2025/07/header-author-img1.webp"
           alt="Author"
-          width={80}
-          height={80}
-          className="rounded-full border-4 border-white shadow-lg"
+          width={190}
+          height={180}
+          className="rounded-full border-4 border-white"
         />
       </motion.div>
 
@@ -153,6 +174,7 @@ export default function HomePage() {
   </div>
 </section>
 
+<OurPlatforms />
 
 
 {/* about section */}
@@ -171,7 +193,7 @@ export default function HomePage() {
       <Image
         src="https://toposel.com/wp-content/uploads/2025/07/entertainer-presenting-tablet-from-sponsor-1.webp"
         alt="Author Image Left"
-        width={380}
+        width={280}
         height={380}
         className="rounded-full object-cover shadow-lg"
       />
@@ -215,8 +237,8 @@ export default function HomePage() {
       <Image
         src="https://toposel.com/wp-content/uploads/2025/07/Frame-1437254183.webp"
         alt="Author Image Right"
-        width={380}
-        height={460}
+        width={320}
+        height={590}
         className="rounded-3xl object-cover shadow-lg"
       />
     </motion.div>
@@ -352,7 +374,7 @@ export default function HomePage() {
 
 {/* google review */}
 
-<section className="bg-gray-50 py-16">
+{/* <section className="bg-gray-50 py-16">
   <div className="max-w-6xl mx-auto px-6">
     <h2 className="text-3xl font-bold text-center mb-10">
       What Our Customers Say
@@ -400,56 +422,17 @@ export default function HomePage() {
       ))}
     </Swiper>
   </div>
-</section>
+</section> */}
 
+<GoogleReviews />
 {/* google review end */}
 
 
 
       
       {/* BLOG */}
-      <section className="bg-slate-50 py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-center mb-12"
-          >
-            Latest Articles
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((b) => (
-              <motion.div
-                key={b}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: b * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
-              >
-                <Image
-                  src={`/ecom2.png`}
-                  alt="Blog"
-                  width={500}
-                  height={300}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-semibold text-lg">Blog Post {b}</h3>
-                  <p className="mt-2 text-gray-500 text-sm">
-                    Short description for blog post {b}.
-                  </p>
-                  <a href="#" className="text-indigo-600 mt-3 inline-block">
-                    Read More →
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      <BlogSection />
 
       {/* CTA */}
       <section className="relative bg-gradient-to-r from-indigo-50 to-white py-20 px-6 lg:px-20">
