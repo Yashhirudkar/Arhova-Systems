@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {
   return (
-      <header className="fixed top-0 left-0 w-full z-50 bg-transparent ">     
+      <header className=" top-0 left-0 w-full z-50 bg-transparent ">     
    <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <Link href="/">
