@@ -164,7 +164,7 @@ export default function HomePage() {
         className="absolute top-24 right-32"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-122.webp"
+          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-120.webp"
           alt="Small Shape"
           width={35}
           height={35}
