@@ -7,7 +7,7 @@ export default function LinkedInRecommendations() {
       name: "Mihir Gadani (MG)",
       position: "Co-Founder at OZiva, Building India's Leading Clean & Plant based Nutrition brand",
       content: "It's been an absolute pleasure working with Vipa, and watching her grow her own venture over time has been truly inspiring. From the early days of our startup, Vipa always stood out with her incredible passion, entrepreneurial spirit, and ability to take on challenges head-on. She's the kind of person who thrives under pressure, gets things done, and always keeps her eye on the bigger picture. Whether it was managing tight deadlines or tackling complex problems, Vipa handled it all with remarkable focus and determination. What truly sets her apart is her hunger to learn and grow. Vipa's journey as an entrepreneur is a testament to her leadership, creativity, and grit. It's exciting to see all that she has accomplished, and I have no doubt she'll continue to build something remarkable. Anyone who gets the chance to work with her in any capacity is truly fortunate.",
-      avatar: "/placeholder-avatar.jpg", // Replace with actual image path
+      avatar: "/ecom3.png", // Replace with actual image path
       connection: "3rd"
     },
     // Add more recommendations here as needed
@@ -63,11 +63,11 @@ export default function LinkedInRecommendations() {
         </div>
       ))}
       
-      <div className="mt-8 text-center">
+      {/* <div className="mt-8 text-center">
         <button className="px-6 py-2 border border-gray-400 rounded-full text-gray-700 hover:bg-gray-100 font-semibold">
           Show all recommendations
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

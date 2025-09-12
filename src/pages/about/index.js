@@ -119,14 +119,13 @@ export default function Contact() {
     color: '#090B0E',
   }}
 >
-  Experience the Advantage <br /> Why We're the Right Choice
+  Experience the Advantage <br /> Why Arhova Systems is the Right Choice
 </h2>
 
 
                <section className="max-w-2xl mx-auto text-left mb-12">
           <p className="text-md text-gray-700">
-           Arhovasystems is a premium Digital Marketing Agency that delivers high-quality services like search engine optimization, performance marketing, and website development.
-          </p>
+     Arhova Systems is a premium digital marketing and technology agency delivering high-quality services such as search engine optimization (SEO), performance marketing, and custom website development — all focused on driving measurable growth and helping businesses succeed.   </p>
         </section>
 <div className="bg-white p-6 max-w-xl mx-auto rounded-lg shadow-md border border-gray-200 mb-6">
   <div className="flex items-start">
@@ -139,8 +138,7 @@ export default function Contact() {
         Proven Result
       </h3>
       <p className="text-gray-700 text-base">
-        We don’t just run campaigns — we drive growth. With a strong track record of improving ROAS, reducing CAC, and scaling revenue across industries, we focus on what matters: delivering results that move the needle for your business.
-      </p>
+We don’t just run campaigns — we drive growth. With a proven record of boosting ROAS, lowering CAC, and scaling revenue across industries, we focus on what matters most: results that truly impact your business.      </p>
     </div>
   </div>
 </div>
@@ -157,7 +155,7 @@ export default function Contact() {
         Customized Solutions
       </h3>
       <p className="text-gray-700 text-base">
-        Your brand isn’t generic — every solution is tailored to your goals.
+        Your brand isn’t generic — every solution we create is built around your goals.
       </p>
     </div>
   </div>
@@ -175,7 +173,7 @@ export default function Contact() {
         Dedicated Support
       </h3>
       <p className="text-gray-700 text-base">
-        Consider us an extension of your team. Our project managers, marketers, and developers are responsive, proactive, and committed to your success — every step of the way.
+        Think of us as an extension of your team. Our project managers, marketers, and developers stay responsive, proactive, and fully committed to your success — every step of the way.
       </p>
     </div>
   </div>
@@ -191,7 +189,7 @@ export default function Contact() {
   {/* Left Image */}
   <div className="overflow-hidden w-[250px] h-[528px] mb-40" >
     <img
-      src="https://toposel.com/wp-content/uploads/2025/07/entertainer-presenting-tablet-from-sponsor-1.webp"
+      src="https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="Entertainer presenting tablet"
       className="w-full h-full object-cover"
       style={{ borderRadius: '50% / 20%' }}
@@ -201,7 +199,7 @@ export default function Contact() {
   {/* Right Image (Flipped) */}
   <div className="overflow-hidden w-[250px] h-[528px] mt-60">
     <img
-      src="	https://toposel.com/wp-content/uploads/2025/07/Frame-1437254183.webp"
+      src="https://images.unsplash.com/photo-1622782914767-404fb9ab3f57?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="Entertainer presenting tablet"
       className="w-full h-full object-cover transform scale-x-[-1]"
       style={{ borderRadius: '50% / 20%' }}
