@@ -19,10 +19,9 @@ export default function Contact() {
   const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
-    // Check if all required fields are filled
-    const isValid = formData.helpType && formData.helpType !== 'I need help with' && 
-                   formData.name && formData.phone && 
-                   formData.email && formData.website && formData.budget;
+    const isValid = formData.helpType && formData.helpType !== 'I need help with' &&
+      formData.name && formData.phone &&
+      formData.email && formData.website && formData.budget;
     setIsFormValid(isValid);
   }, [formData]);
 
@@ -33,7 +32,6 @@ export default function Contact() {
       [name]: value
     }));
 
-    // Show additional fields when a help type is selected
     if (name === 'helpType' && value !== 'I need help with') {
       setShowAdditionalFields(true);
     } else if (name === 'helpType' && value === 'I need help with') {
@@ -43,7 +41,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message. We will get back to you soon!');
   };
@@ -51,134 +48,116 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        {/* <title>Contact Us </title> */}
-        <meta name="description" content="Get in touch with Toposel" />
+        <title>Contact Us - Arhova Systems</title>
+        <meta name="description" content="Get in touch with Arhova Systems for performance marketing, SEO, and web development services." />
       </Head>
 
-      <main className="max-w-9xl mx-auto px-10 sm:px-20 lg:px-0 " >
+      <main className="max-w-9xl mx-auto px-0 sm:px-0 lg:px-0 mt-12">
         {/* Header Section */}
-<header 
-  className="text-center mb-4 mt-0 text-gray-900 py-20"
-  style={{ 
-    background: 'linear-gradient(150deg, rgba(222, 189, 246, 1), rgba(233, 226, 250, 0.72))'
-  }}
->         <h1
-            className="mt-19 mb-4 font-bold text-gray-900"
-            style={{
-              fontFamily: '"Figtree", sans-serif',
-              fontSize: '56px',
-              lineHeight: '60px',
-              color: 'var(--e-global-color-text)',
-            }}
+        <header
+          className="text-center py-35 sm:py-24 md:py-32 lg:py-40 -mt-20 sm:-mt-20 lg:-mt-20"
+          style={{
+            background: 'linear-gradient(150deg, rgba(222, 189, 246, 1), rgba(233, 226, 250, 0.72))'
+          }}
+        >
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4"
+            style={{ fontFamily: '"Figtree", sans-serif' }}
           >
             Contact Us
           </h1>
-          
-  <p
-    className="text-bkack-700 mb-30 text-lg"
-    style={{ 
-      fontFamily: '"Figtree", sans-serif',
-    }}
-  >
-   Arhova systems  &raquo; Contact Us
-  </p>
-          </header>
-
-
-        {/* Intro Text */}
-       
-        {/* Contact Information & Form Section */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16 mt-30" >
-          {/* Contact Information */}
-          <div className="space-y-8">
-            {/* Email */}
-            <h2
-            className="mb-4 font-bold"
-            style={{
-              fontFamily: '"Figtree", Sans-serif',
-              fontSize: '16px',
-              fontWeight: 700,
-              lineHeight: '20px',
-              color: '#4e2fda',
-            }}
+          <p
+            className="text-black-700 text-base sm:text-lg"
+            style={{ fontFamily: '"Figtree", sans-serif' }}
           >
-            Contact Us
-          </h2>
-
-             <h2
-          className="mb-4"
-          style={{
-            fontFamily: '"Figtree", Sans-serif',
-            fontSize: '40px',
-            fontWeight: 600,
-            lineHeight: '48px',
-            color: '#090B0E',
-          }}
-        >
-          Get in Touch with Us <br /> We Value Your Connection
-        </h2>
-
-               <section className="max-w-2xl mx-auto text-left mb-12">
-          <p className="text-md text-gray-700">
-           We partner with a select number of brands to deliver focused, high-impact growth through performance marketing, retention strategies, AI-driven SEO, and custom development. If you’re serious about scaling and seeking a strategic partner, we’re now reviewing new collaborations.
+            Arhova systems &raquo; Contact Us
           </p>
-        </section>
+        </header>
 
-           <div className="bg-[#edeafb] p-6  max-w-xl mx-auto">
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
+        {/* Contact Information & Form Section */}
+        <div className="grid md:grid-cols-2 gap-12 px-4 max-w-6xl mx-auto mb-16 mt-8 md:mt-16">
+          {/* Contact Information */}
+          <div className="space-y-6 sm:space-y-8">
+            <h2
+              className="font-bold text-sm sm:text-base"
+              style={{
+                fontFamily: '"Figtree", Sans-serif',
+                fontWeight: 700,
+                color: '#4e2fda',
+              }}
+            >
+              Contact Us
+            </h2>
+
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-gray-900"
+              style={{
+                fontFamily: '"Figtree", Sans-serif',
+                fontWeight: 600,
+              }}
+            >
+              Get in Touch with Us <br /> We Value Your Connection
+            </h2>
+
+            <section className="max-w-2xl text-left mb-6">
+              <p className="text-sm sm:text-base text-gray-700">
+                We partner with a select number of brands to deliver focused, high-impact growth through performance marketing, retention strategies, AI-driven SEO, and custom development. If you’re serious about scaling and seeking a strategic partner, we’re now reviewing new collaborations.
+              </p>
+            </section>
+
+            {/* Email */}
+            <div className="bg-[#edeafb] p-6 rounded-lg">
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Email Address</h3>
+                  <p className="text-base text-blue-600">arhovasystems@gmail.com</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Email Address</h3>
-                <p className="text-lg text-blue-600">arhovasystems@gmail.com</p>
+            </div>
+
+            {/* Address */}
+            <div className="bg-[#edeafb] p-6 rounded-lg">
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">Operational Address</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                    <strong>Arhova Systems</strong> <br />
+                    Nagpur, Maharashtra, India – 440001
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-            
-            {/* Address */}
-        <div className="bg-[#edeafb] p-6  max-w-xl mx-auto mb-6">
-  <div className="flex items-start">
-    <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
-      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-      </svg>
-    </div>
-    <div>
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">Operational Address</h3>
-      <p className="text-gray-700 leading-relaxed">
-  <strong>Arhova Systems</strong> <br />
-  Nagpur, Maharashtra, India – 440001
-</p>
-
-    </div>
-  </div>
-</div>
-
-          </div>
-          
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">Get In Touch</h3>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-white p-6 sm:p-8 rounded-lg border border-gray-100 shadow-xl">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Get In Touch</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-6">
               We take on a limited number of growth-focused brands. Think we're the right fit? Let's connect.
             </p>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label htmlFor="helpType" className="block text-sm font-medium text-gray-700 mb-2">
                   I need help with
                 </label>
-                <select 
+                <select
                   id="helpType"
                   name="helpType"
                   value={formData.helpType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
                   required
                 >
                   <option value="I need help with">I need help with</option>
@@ -189,54 +168,54 @@ export default function Contact() {
                   <option value="Other">Other</option>
                 </select>
               </div>
-              
+
               {showAdditionalFields && (
-                <div className="space-y-4">
-                  <input 
-                    type="text" 
+                <div className="space-y-4 sm:space-y-6">
+                  <input
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-400"
                     placeholder="Your Name"
                     required
                   />
-                  
-                  <input 
-                    type="tel" 
+
+                  <input
+                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-400"
                     placeholder="Phone Number"
                     required
                   />
-                  
-                  <input 
-                    type="email" 
+
+                  <input
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-400"
                     placeholder="Email Address"
                     required
                   />
-                  
-                  <input 
-                    type="url" 
+
+                  <input
+                    type="url"
                     name="website"
                     value={formData.website}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-400"
                     placeholder="Website Link"
                     required
                   />
-                  
-                  <select 
+
+                  <select
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
                     required
                   >
                     <option value="">Monthly Ad Spends Budget (INR)</option>
@@ -246,22 +225,22 @@ export default function Contact() {
                     <option value="50 Lacs - 2 Cr">50 Lacs - 2 Cr</option>
                     <option value="More than 2 Cr">More than 2 Cr</option>
                   </select>
-                  
-                  <textarea 
+
+                  <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows="4" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    rows="4"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-400"
                     placeholder="Your Message"
                   ></textarea>
-                  
-                  <button 
-                    type="submit" 
+
+                  <button
+                    type="submit"
                     disabled={!isFormValid}
                     className={`w-full py-3 px-4 rounded-md font-medium transition duration-300 ${
-                      isFormValid 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                      isFormValid
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
                         : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                     }`}
                   >
@@ -273,7 +252,7 @@ export default function Contact() {
           </div>
         </div>
 
-<CTASection />
+        <CTASection />
 
       </main>
     </div>

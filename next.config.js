@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'toposel.com',
+        hostname: 'fastly.picsum.photos',
       },
     ],
   },

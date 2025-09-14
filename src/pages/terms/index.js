@@ -12,7 +12,7 @@ export default function TermsPage() {
 
             <ArticleSection title="1.Introduction">
               <p>
-                Welcome to Toposel Digital Marketing Private Limited! These terms and conditions
+                Welcome to arhovasystems Digital Marketing Private Limited! These terms and conditions
                 govern your use of our website and services. By accessing our website or using our
                 services, you agree to comply with these terms.
               </p>
@@ -21,7 +21,7 @@ export default function TermsPage() {
             <ArticleSection title="2.Definitions">
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>“Toposel,” “we,” “us,” and “our”</strong> refer to Toposel Digital Marketing
+                  <strong>“arhovasystems,” “we,” “us,” and “our”</strong> refer to arhovasystems Digital Marketing
                   Private Limited.
                 </li>
                 <li>
@@ -30,7 +30,7 @@ export default function TermsPage() {
                 </li>
                 <li>
                   <strong>“Services”</strong> refer to the paid ads management services, SEO services, and
-                  website development services provided by Toposel Digital Marketing Private Limited.
+                  website development services provided by arhovasystems Digital Marketing Private Limited.
                 </li>
               </ul>
             </ArticleSection>
@@ -46,7 +46,7 @@ export default function TermsPage() {
             <ArticleSection title="4.Services">
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  Toposel offers paid ads management services, SEO services, and website development
+                  arhovasystems offers paid ads management services, SEO services, and website development
                   services to businesses seeking to improve their online presence.
                 </li>
                 <li>
@@ -72,7 +72,7 @@ export default function TermsPage() {
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   All content, designs, logos, and intellectual property on our website and in our
-                  services are the property of Toposel unless otherwise indicated.
+                  services are the property of arhovasystems unless otherwise indicated.
                 </li>
                 <li>
                   You may not use, reproduce, or distribute our intellectual property without prior
@@ -88,7 +88,7 @@ export default function TermsPage() {
                   parties without your consent, except as required by law.
                 </li>
                 <li>
-                  You agree to maintain the confidentiality of any information shared by Toposel and not
+                  You agree to maintain the confidentiality of any information shared by arhovasystems and not
                   disclose it to third parties.
                 </li>
               </ul>
@@ -97,7 +97,7 @@ export default function TermsPage() {
             <ArticleSection title="8.Disclaimer">
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  While Toposel aims to provide accurate and effective services, we do not guarantee
+                  While arhovasystems aims to provide accurate and effective services, we do not guarantee
                   specific results or outcomes.
                 </li>
                 <li>
@@ -110,7 +110,7 @@ export default function TermsPage() {
             <ArticleSection title="9.Limitation of Liability">
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  Toposel’s liability for any claims related to our services is limited to the total
+                  arhovasystems’s liability for any claims related to our services is limited to the total
                   amount paid by you for those services.
                 </li>
                 <li>
@@ -135,7 +135,7 @@ export default function TermsPage() {
 
             <ArticleSection title="11.Changes to Terms">
               <p>
-                Toposel reserves the right to update or modify these terms and conditions at any time
+                arhovasystems reserves the right to update or modify these terms and conditions at any time
                 without prior notice. It is your responsibility to review these terms periodically for
                 changes.
               </p>
@@ -144,7 +144,7 @@ export default function TermsPage() {
             <ArticleSection title="12.Contact Information">
               <p>
                 If you have questions or concerns about these terms and conditions, please contact us at
-                <a className="mx-1 underline" href="mailto:info@toposel.com">info@toposel.com</a>
+                <a className="mx-1 underline" href="mailto:info@arhovasystems.com">info@arhovasystems.com</a>
                 or <a className="mx-1 underline" href="tel:+918369129670">+91 83691 29670</a>.
               </p>
             </ArticleSection>
@@ -161,7 +161,7 @@ export default function TermsPage() {
 
         {/* <footer className="border-t bg-white">
           <div className="mx-auto max-w-4xl px-6 py-6 text-sm text-gray-500">
-            © {new Date().getFullYear()} Toposel Digital Marketing Private Limited. All rights reserved.
+            © {new Date().getFullYear()} arhovasystems Digital Marketing Private Limited. All rights reserved.
           </div>
         </footer> */}
       </main>

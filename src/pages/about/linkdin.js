@@ -6,7 +6,7 @@ export default function LinkedInRecommendations() {
       id: 1,
       name: "Mihir Gadani (MG)",
       position: "Co-Founder at OZiva, Building India's Leading Clean & Plant based Nutrition brand",
-      content: "It's been an absolute pleasure working with Vipa, and watching her grow her own venture over time has been truly inspiring. From the early days of our startup, Vipa always stood out with her incredible passion, entrepreneurial spirit, and ability to take on challenges head-on. She's the kind of person who thrives under pressure, gets things done, and always keeps her eye on the bigger picture. Whether it was managing tight deadlines or tackling complex problems, Vipa handled it all with remarkable focus and determination. What truly sets her apart is her hunger to learn and grow. Vipa's journey as an entrepreneur is a testament to her leadership, creativity, and grit. It's exciting to see all that she has accomplished, and I have no doubt she'll continue to build something remarkable. Anyone who gets the chance to work with her in any capacity is truly fortunate.",
+      content: "Working with Ashish at Arhova Systems has been an incredible experience. From the early stages of the company, he consistently demonstrated exceptional vision, technical expertise, and a relentless drive to solve problems. His ability to navigate challenges, manage projects efficiently, and deliver high-quality solutions is truly impressive. Ashish combines creativity with strategic thinking, always keeping the bigger picture in mind while handling the details with precision. What stands out most is his dedication to innovation and continuous learning, ensuring that Arhova Systems stays ahead in a fast-paced industry. Collaborating with him has been inspiring, and anyone who works with Ashish can expect professionalism, insight, and a strong commitment to excellence.",
       avatar: "/ecom3.png", // Replace with actual image path
       connection: "3rd"
     },
@@ -15,8 +15,14 @@ export default function LinkedInRecommendations() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">LinkedIn Recommendations</h2>
-      <p className="text-gray-600 mb-8">See what industry leaders have to say about our founders</p>
+          <h2
+            className="text-center mb-3 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[44px] leading-tight"
+          style={{ fontSize: '44px', lineHeight: '48px', color: '#1f2937' }} // #1f2937 is Tailwind's gray-800
+        >
+          LinkedIn Recommendations
+        </h2>
+
+      <p className="text-center text-gray-600 mb-8">See what industry leaders have to say about our founders</p>
       
       <div className="border-t border-gray-300 my-6"></div>
       
@@ -40,14 +46,15 @@ export default function LinkedInRecommendations() {
                   <h3 className="font-semibold text-gray-900">{rec.name}</h3>
                   <p className="text-sm text-gray-600">{rec.position}</p>
                 </div>
-                <span className="text-xs text-gray-500">{rec.connection} connection</span>
+                {/* <span className="text-xs text-gray-500">{rec.connection} connection</span> */}
               </div>
               
-              <div className="mt-4 text-gray-800 leading-relaxed">
-                <p>{rec.content}</p>
-              </div>
+             <div className="mt-4 p-4 rounded-md bg-[#f8f8f8] text-black leading-relaxed">
+              <p>{rec.content}</p>
+            </div>
+
               
-              <div className="mt-4 flex space-x-4">
+              {/* <div className="mt-4 flex space-x-4">
                 <button className="text-blue-600 hover:text-blue-800 text-sm font-semibold">
                   Like
                 </button>
@@ -57,7 +64,7 @@ export default function LinkedInRecommendations() {
                 <button className="text-gray-600 hover:text-gray-800 text-sm">
                   Share
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

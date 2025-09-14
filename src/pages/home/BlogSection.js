@@ -4,34 +4,35 @@ import Image from "next/image";
 
 export default function BlogSection() {
   const blogs = [
-    {
-      id: 1,
-      title: "Case Study: Transforming Website Performance at Toposel",
-      author: "Vipa J",
-      date: "July 16, 2024",
-      desc: "Introduction At Toposel, we pride ourselves on delivering top-notch website...",
-      img: "https://toposel.com/wp-content/uploads/2024/07/image.png",
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "Case Study: Big Growth for a Skincare D2C Indian Brand",
-      author: "Vipa J",
-      date: "July 16, 2024",
-      desc: "Overview Last month, our brand saw amazing growth in online sessions and sales...",
-      img: "https://toposel.com/wp-content/uploads/2024/07/image.jpg",
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Increasing Conversion Rate – Cosmetic Brand Case Study in India",
-      author: "Vipa J",
-      date: "June 22, 2023",
-      desc: "This article is about how a cosmetic brand in India increased its sales by...",
-      img: "https://toposel.com/wp-content/uploads/2023/06/colors-291851_1280.jpg",
-      link: "#",
-    },
-  ];
+  {
+    id: 1,
+    title: "Case Study: Building High-Performance Websites for Scale",
+    author: "Arhova Team",
+    date: "September 12, 2025",
+    desc: "Discover how we transformed a client’s digital presence with a custom website solution—improving speed, usability, and conversions for long-term growth...",
+    img: "https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ",
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Case Study: Boosting Efficiency with CRM & Marketing Automation",
+    author: "Arhova Team",
+    date: "September 10, 2025",
+    desc: "We helped a growing brand implement CRM and marketing automation to streamline customer management, nurture leads, and drive repeat sales...",
+    img: "https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ",
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Case Study: Driving ROI with Google Ads Optimization",
+    author: "Arhova Team",
+    date: "September 08, 2025",
+    desc: "Learn how our data-driven Google Ads strategies reduced acquisition costs, increased conversions, and delivered sustainable ROI for a competitive industry brand...",
+    img: "https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I",
+    link: "#",
+  },
+];
+
 
   return (
     <section className="bg-slate-50 py-20">
@@ -50,9 +51,7 @@ export default function BlogSection() {
 
         {/* Subtext */}
         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-          Explore real-world case studies and expert insights that showcase how we help brands grow. 
-          From scaling D2C revenue with performance marketing to optimizing customer retention, our blog 
-          brings you actionable strategies and proven results from the field.
+         Dive into practical case studies and expert insights showcasing how we build high-performing websites, implement smart CRM & marketing automation, and maximize ROI through Google Ads. Each blog delivers actionable strategies, proven growth results, and real-world success stories to help your brand scale with confidence.
         </p>
 
         {/* Blog Grid */}

@@ -7,13 +7,13 @@ import "swiper/css/navigation";
 
 export default function OurPlatforms() {
   const platforms = [
-    { img: "https://toposel.com/wp-content/uploads/2025/07/22-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/55-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/facebook1-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/44-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/11-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/Snapchat-removebg-preview.png" },
-    { img: "https://toposel.com/wp-content/uploads/2025/07/66-removebg-preview.png" },
+    { img: "/22-removebg-preview.png" },
+    { img: "/55-removebg-preview.png" },
+    { img: "/facebook1-removebg-preview.png" },
+    { img: "/44-removebg-preview.png" },
+    { img: "/11-removebg-preview.png" },
+    { img: "/Snapchat-removebg-preview.png" },
+    { img: "/66-removebg-preview.png" },
   ];
 
   return (

@@ -29,14 +29,31 @@ export default function HomePage() {
       initial={{ opacity: 1, y: 40 }}
       animate={{ opacity: 1, y: 1 }}
       transition={{ duration: 1 }}
-      className="space-y-6"
-    >
-      <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-black">
-        Empowering Digital Solutions for Your Business
-      </h1>
+      className="space-y-6 z-10">
+         <motion.div
+        animate={{ y: [0, -18, 0] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        className="absolute bottom-58 -left-40 "
+      >
+
+        <Image
+          src="/Ellipse-120.webp"
+          alt="Author"
+          width={180}
+          height={180}
+          className=""
+        />
+      </motion.div>
+        
+    <h1 className="text-[64px] font-semibold leading-[65px] text-[#090B0E]">
+ Arhova Systems<br/>
+Web & Digital Marketing Experts
+</h1>
+
       <p className="text-lg text-gray-600 max-w-xl">
-        Build, scale and transform your business with our innovative
-        digital products and services.
+        At Arhova Systems, we create strong digital experiences that help your business grow.
+From website design and development services to custom CRM solutions and
+ROI-driven marketing strategies, we deliver exactly what you need.
       </p>
 
       <div className="flex flex-wrap gap-3 items-center">
@@ -44,13 +61,13 @@ export default function HomePage() {
           href="#"
           className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-full shadow hover:shadow-lg transition"
         >
-          Get started
+          Get in Touch
         </a>
         <a
           href="#"
           className="inline-flex items-center gap-2 border border-gray-300 text-gray-800 px-4 py-3 rounded-full hover:bg-indigo-600 hover:text-white"
         >
-          Learn more
+          Explore Our Services
         </a>
       </div>
     </motion.div>
@@ -59,7 +76,7 @@ export default function HomePage() {
     <div className="relative w-full  flex justify-center items-center">
       {/* Background Image */}
       <Image
-        src="https://toposel.com/wp-content/uploads/2025/07/header-imgbg-1.webp"
+        src="/header-imgbg-1.webp"
         alt="Hero Background"
         width={600}
         height={500}
@@ -68,7 +85,7 @@ export default function HomePage() {
 
       {/* Main Hero Image */}
       <Image
-        src="https://toposel.com/wp-content/uploads/2025/07/hero-image.webp"
+        src="/hero-image.webp"
         alt="Hero Main"
         width={500}
         height={400}
@@ -83,7 +100,7 @@ export default function HomePage() {
         className="absolute -bottom-12 -left-30 "
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/header-author-img1.webp"
+          src="/header-author-img1.webp"
           alt="Author"
           width={190}
           height={180}
@@ -97,7 +114,7 @@ export default function HomePage() {
         className="absolute top-10 left-12"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/instagram.png"
+          src="/instagram.png"
           alt="Instagram"
           width={45}
           height={45}
@@ -110,7 +127,7 @@ export default function HomePage() {
         className="absolute bottom-16 right-20"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/facebook-1.png"
+          src="/facebook-1.png"
           alt="Facebook"
           width={45}
           height={45}
@@ -123,7 +140,7 @@ export default function HomePage() {
         className="absolute top-6 right-10"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-120.webp"
+          src="/Ellipse-120.webp"
           alt="Ellipse"
           width={60}
           height={60}
@@ -137,7 +154,7 @@ export default function HomePage() {
         className="absolute bottom-24 left-32"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/adwords.png"
+          src="/adwords.png"
           alt="Small Shape"
           width={40}
           height={40}
@@ -150,13 +167,13 @@ export default function HomePage() {
         className="absolute top-24 right-32"
       >
         <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-120.webp"
+          src="/Ellipse-120.webp"
           alt="Small Shape"
           width={35}
           height={35}
         />
       </motion.div>
-      
+      {/* / */}
     </div>
   </div>
 </section>
@@ -178,7 +195,7 @@ export default function HomePage() {
       className="flex justify-center"
     >
       <Image
-        src="https://toposel.com/wp-content/uploads/2025/07/entertainer-presenting-tablet-from-sponsor-1.webp"
+        src="/entertainer-presenting-tablet-from-sponsor-1.webp"
         alt="Author Image Left"
         width={280}
         height={380}
@@ -194,13 +211,11 @@ export default function HomePage() {
       viewport={{ once: true }}
       className="text-center lg:text-left"
     >
-      <h2 className="text-4xl font-extrabold text-gray-900 leading-tight">
-        Unbeatable Growth Solutions
+      <h2 className="text-3xl font-bold text-gray-900 leading-tight">
+        Industries We Empower
       </h2>
       <p className="mt-4 text-lg text-gray-600">
-        Toposel is a data led growth marketing agency which provides the best
-        in class services to help your business grow across the digital vertical.
-        Our core is data and is backed by creativity and AI.
+       From startups to established brands, we offer web development, CRM development, and digital marketing strategies that drive growth. No pressure, no sales pitches, just an open discussion about developing the best solution for your company.
       </p>
 
       <motion.a
@@ -222,7 +237,7 @@ export default function HomePage() {
       className="flex justify-center"
     >
       <Image
-        src="https://toposel.com/wp-content/uploads/2025/07/Frame-1437254183.webp"
+        src="/Frame-1437254183.webp"
         alt="Author Image Right"
         width={320}
         height={590}
@@ -298,7 +313,7 @@ export default function HomePage() {
     viewport={{ once: true }}
     className="text-3xl font-bold text-center mb-6 text-gray-900"
   >
-    Best-in-Class Growth Services
+    Growth Solutions That Deliver, Not Just Promise
   </motion.h2>
 
   <motion.p
@@ -308,19 +323,19 @@ export default function HomePage() {
     viewport={{ once: true }}
     className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
   >
-    Unlock your brand’s full potential with performance-driven solutions—ranging from paid ads to CRO, content, and automation—to accelerate scale and maximize ROI.
+    utting-edge paid advertising, CRO, content strategy, and automation—all designed around your vision. We build what works, not what fits a template. Maximize ROI. Scale with confidence.
   </motion.p>
 
   <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
     {[
       {
-        title: "Retention Marketing",
-        desc: "Engage and retain customers through targeted email, WhatsApp, and loyalty strategies that boost lifetime value.",
+        title: "CRM Development",
+        desc: "We provide CRM development services that enhance workflows, strengthen customer connections, and integrate data with CRM to help businesses thrive.",
         icon: "fas fa-user-friends",
       },
       {
-        title: "SEO and AI Optimisation",
-        desc: "Position your brand at the forefront—whether users are searching on Google or asking AI.",
+        title: "Digital Marketing",
+        desc: "Our digital marketing professionals create strategies for digital lead generation, social media marketing, and ROI-oriented campaigns that attract, engage, and convert audiences.",
         icon: "fas fa-chart-line",
       },
       {
@@ -330,7 +345,7 @@ export default function HomePage() {
       },
       {
         title: "Website/Software Development",
-        desc: "Build fast, scalable, and custom digital experiences tailored to your business goals and user needs.",
+        desc: "Your website represents your first impression. Our web development service creates quick, scalable, and visually appealing websites that turn visitors into loyal clients..",
         icon: "fas fa-laptop-code",
       },
     ].map((service, i) => (
@@ -361,55 +376,7 @@ export default function HomePage() {
 
 {/* google review */}
 
-{/* <section className="bg-gray-50 py-16">
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold text-center mb-10">
-      What Our Customers Say
-    </h2>
 
-    <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={30}
-      slidesPerView={1}
-      autoplay={{ delay: 10000, disableOnInteraction: false }}
-      pagination={{ clickable: true }}
-      navigation
-      breakpoints={{
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-    >
-      {[
-        {
-          name: "Ravi Kumar",
-          review:
-            "Great service! The team was very professional and delivered on time.",
-        },
-        {
-          name: "Priya Sharma",
-          review: "Amazing experience, customer support was excellent!",
-        },
-        {
-          name: "Ankit Verma",
-          review: "Best company to work with. Highly recommended!",
-        },
-        {
-          name: "Sneha Patel",
-          review: "Quality work with affordable pricing. Totally worth it!",
-        },
-      ].map((rev, index) => (
-        <SwiperSlide key={index}>
-          <div className="bg-white p-6 m-3 rounded-2xl shadow-md h-full flex flex-col justify-between">
-            <p className="text-gray-600 mb-4">“{rev.review}”</p>
-            <h4 className="font-semibold text-gray-900">{rev.name}</h4>
-            <div className="flex text-yellow-500 mt-2">⭐⭐⭐⭐⭐</div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</section> */}
 
 <GoogleReviews />
 {/* google review end */}
@@ -431,8 +398,7 @@ export default function HomePage() {
         Get In Touch With Us Today
       </h2>
       <p className="text-lg text-gray-600">
-        We’re looking to work with a few Vision-Aligned Brands.  
-        Share your details and our team will connect with you shortly.
+        We collaborate with ambitious brands ready to scale. Share your details and our experts will connect with you to craft tailored strategies for success.
       </p>
       <ul className="space-y-3 text-gray-700">
         <li className="flex items-center gap-2">
@@ -441,11 +407,11 @@ export default function HomePage() {
         </li>
         <li className="flex items-center gap-2">
           <i className="fas fa-check-circle text-indigo-600"></i> 
-          Scalable growth strategies
+          Scalable website & CRM solutions
         </li>
         <li className="flex items-center gap-2">
           <i className="fas fa-check-circle text-indigo-600"></i> 
-          Dedicated expert team
+          Data-driven Google Ads campaigns
         </li>
       </ul>
     </div>

@@ -11,24 +11,23 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>Blog - Toposel</title>
-        <meta name="description" content="Read the latest articles and insights from Toposel" />
+        <title>Blog -  Arhova systems</title>
+        <meta name="description" content="Read the latest articles and insights from arhovasystems" />
       </Head>
 
-      <main className="max-w-9xl mx-auto px-10 sm:px-20 lg:px-0">
+       <main className="max-w-9xl mx-auto px-0 sm:px-0 lg:px-0 mt-12">
         {/* Header Section */}
-        <header 
-          className="text-center mb-4 mt-0 text-gray-900 py-20"
-          style={{ 
-            background: 'linear-gradient(150deg, rgba(222, 189, 246, 1), rgba(233, 226, 250, 0.72))'
+       <header
+         className="text-center py-35 sm:py-24 md:py-32 lg:py-40 -mt-20 sm:-mt-20 lg:-mt-20"
+          style={{
+            background:
+              'linear-gradient(150deg, rgba(222, 189, 246, 1), rgba(233, 226, 250, 0.72))',
           }}
-        >         
+        >     
           <h1
-            className="mt-19 mb-4 font-bold text-gray-900"
+            className="mb-4 font-bold text-gray-900 text-4xl sm:text-5xl md:text-6xl"
             style={{
               fontFamily: '"Figtree", sans-serif',
-              fontSize: '56px',
-              lineHeight: '60px',
               color: 'var(--e-global-color-text)',
             }}
           >
@@ -36,20 +35,20 @@ export default function Contact() {
           </h1>
           
           <p
-            className="text-bkack-700 mb-30 text-lg"
+            className="text-bkack-700 text-lg"
             style={{ 
               fontFamily: '"Figtree", sans-serif',
             }}
           >
-            Toposel &raquo; Blog
+            arhovasystems &raquo; Blog
           </p>
         </header>
 
         {/* Blog Content */}
-        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col lg:flex-row gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col lg:flex-row lg:gap-12">
             {/* Main Blog Content */}
-            <div className="w-full lg:w-6/12 ml-40">
+            <div className="w-full lg:w-3/4">
               {/* Blog Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Blog Post 1 */}
@@ -63,7 +62,7 @@ export default function Contact() {
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
-              <a href="https://toposel.com/is-google-search-still-relevant-in-2025-the-truth-about-search-trends/">
+              <a href=" ">
                 Is Google Search Still Relevant in 2025? The Truth About Search Trends
               </a>
             </h3>
@@ -85,7 +84,7 @@ export default function Contact() {
               Is Google Search Dying Out? For years, Google Search has been the go-to for finding...
             </p>
             <a 
-              href="https://toposel.com/is-google-search-still-relevant-in-2025-the-truth-about-search-trends/" 
+              href=" " 
               className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
             >
               Read More 
@@ -102,14 +101,14 @@ export default function Contact() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
   <div className="relative overflow-hidden">
     <img 
-      src="https://toposel.com/wp-content/uploads/2025/02/man-5901349_1920.jpg" 
+      src="https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA" 
       alt="Online Ads and Information Overload: Impact on the Consumer Behaviour"
       className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
     />
   </div>
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
-      <a href="https://toposel.com/online-ads-and-information-overload-impact-on-the-consumer-behaviour/">
+      <a href=" ">
         Online Ads and Information Overload: Impact on the Consumer Behaviour
       </a>
     </h3>
@@ -131,7 +130,7 @@ export default function Contact() {
       We're constantly bombarded with information from all directions—social media updates...
     </p>
     <a 
-      href="https://toposel.com/online-ads-and-information-overload-impact-on-the-consumer-behaviour/" 
+      href=" " 
       className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
     >
       Read More 
@@ -147,15 +146,15 @@ export default function Contact() {
                <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
   <div className="relative overflow-hidden">
     <img 
-      src="https://toposel.com/wp-content/uploads/2024/07/image.png" 
-      alt="Case Study: Transforming Website Performance at Toposel"
+      src="https://fastly.picsum.photos/id/76/4912/3264.jpg?hmac=VkFcSa2Rbv0R0ndYnz_FAmw02ON1pPVjuF_iVKbiiV8" 
+      alt="Case Study: Transforming Website Performance at arhovasystems"
       className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
     />
   </div>
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
-      <a href="https://toposel.com/case-study-transforming-website-performance-at-toposel/">
-        Case Study: Transforming Website Performance at Toposel
+      <a href=" ">
+        Case Study: Transforming Website Performance at arhovasystems
       </a>
     </h3>
     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -173,10 +172,10 @@ export default function Contact() {
       </span>
     </div>
     <p className="text-gray-600 mb-4">
-      Introduction At Toposel, we pride ourselves on delivering top-notch website...
+      Introduction At arhovasystems, we pride ourselves on delivering top-notch website...
     </p>
     <a 
-      href="https://toposel.com/case-study-transforming-website-performance-at-toposel/" 
+      href=" " 
       className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
     >
       Read More 
@@ -192,14 +191,14 @@ export default function Contact() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
   <div className="relative overflow-hidden">
     <img 
-      src="https://toposel.com/wp-content/uploads/2024/07/image.jpg" 
+      src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" 
       alt="Case Study: Big Growth for a Skincare D2C Indian Brand"
       className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
     />
   </div>
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
-      <a href="https://toposel.com/case-study-big-growth-for-a-skincare-d2c-indian-brand/">
+      <a href=" ">
         Case Study: Big Growth for a Skincare D2C Indian Brand
       </a>
     </h3>
@@ -221,7 +220,7 @@ export default function Contact() {
       Overview Last month, our brand saw amazing growth in online sessions and sales. We...
     </p>
     <a 
-      href="https://toposel.com/case-study-big-growth-for-a-skincare-d2c-indian-brand/" 
+      href=" " 
       className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
     >
       Read More 
@@ -242,13 +241,13 @@ export default function Contact() {
                       <span className="px-3 py-2 bg-blue-600 text-white rounded-md">1</span>
                     </li>
                     <li>
-                      <a href="https://toposel.com/blogs/page/2/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">2</a>
+                      <a href="/blogs/page/2/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">2</a>
                     </li>
                     <li>
-                      <a href="https://toposel.com/blogs/page/3/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">3</a>
+                      <a href="/blogs/page/3/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">3</a>
                     </li>
                     <li>
-                      <a href="https://toposel.com/blogs/page/4/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">4</a>
+                      <a href="/blogs/page/4/" className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">4</a>
                     </li>
                   </ul>
                 </nav>
@@ -256,11 +255,11 @@ export default function Contact() {
             </div>
 
             {/* Sidebar */}
-            <div className="w-full lg:w-4/12">
+            <div className="w-full lg:w-1/4 mt-8 lg:mt-0">
               {/* Search Widget */}
              <div className="bg-white p-6 rounded-lg shadow-md mb-8">
   <h4 className="text-lg font-bold mb-4">Search</h4>
-  <form role="search" method="get" action="https://toposel.com/" className="relative">
+  <form role="search" method="get" action="https://www.google.com/" className="relative">
     <input 
       type="search" 
       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
@@ -285,13 +284,13 @@ export default function Contact() {
                   {/* Recent Post 1 */}
                   <div className="flex items-start space-x-3">
                     <img 
-                      src="https://toposel.com/wp-content/uploads/2025/03/2149416732-150x150.jpg" 
+                      src="https://fastly.picsum.photos/id/76/4912/3264.jpg?hmac=VkFcSa2Rbv0R0ndYnz_FAmw02ON1pPVjuF_iVKbiiV8" 
                       alt="Is Google Search Still Relevant in 2025? The Truth About Search Trends" 
                       className="w-16 h-16 object-cover rounded"
                     />
                     <div>
                       <a 
-                        href="https://toposel.com/is-google-search-still-relevant-in-2025-the-truth-about-search-trends/" 
+                        href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
                         Is Google Search Still Relevant in 2025? The Truth About Search Trends
@@ -303,13 +302,13 @@ export default function Contact() {
                   {/* Recent Post 2 */}
                   <div className="flex items-start space-x-3">
                     <img 
-                      src="https://toposel.com/wp-content/uploads/2025/02/man-5901349_1920-150x150.jpg" 
+                      src="https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ" 
                       alt="Online Ads and Information Overload: Impact on the Consumer Behaviour" 
                       className="w-16 h-16 object-cover rounded"
                     />
                     <div>
                       <a 
-                        href="https://toposel.com/online-ads-and-information-overload-impact-on-the-consumer-behaviour/" 
+                        href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
                         Online Ads and Information Overload: Impact on the Consumer Behaviour
@@ -321,16 +320,16 @@ export default function Contact() {
                   {/* Recent Post 3 */}
                   <div className="flex items-start space-x-3">
                     <img 
-                      src="https://toposel.com/wp-content/uploads/2024/07/image-150x150.png" 
-                      alt="Case Study: Transforming Website Performance at Toposel" 
+                      src="https://fastly.picsum.photos/id/163/2000/1333.jpg?hmac=htdHeSJwlYOxS8b0TTpz2s8tD_QDlmsd3JHYa_HGrg8" 
+                      alt="Case Study: Transforming Website Performance at arhovasystems" 
                       className="w-16 h-16 object-cover rounded"
                     />
                     <div>
                       <a 
-                        href="https://toposel.com/case-study-transforming-website-performance-at-toposel/" 
+                        href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
-                        Case Study: Transforming Website Performance at Toposel
+                        Case Study: Transforming Website Performance at arhovasystems
                       </a>
                       <p className="text-sm text-gray-500">July 16, 2024</p>
                     </div>
@@ -339,13 +338,13 @@ export default function Contact() {
                   {/* Recent Post 4 */}
                   <div className="flex items-start space-x-3">
                     <img 
-                      src="https://toposel.com/wp-content/uploads/2024/07/image-150x150.jpg" 
+                      src="https://fastly.picsum.photos/id/635/2509/1673.jpg?hmac=O3P1jEnFp0FqGswH9gRKIuKI-inphuJBkZZ1-enTKEw" 
                       alt="Case Study: Big Growth for a Skincare D2C Indian Brand" 
                       className="w-16 h-16 object-cover rounded"
                     />
                     <div>
                       <a 
-                        href="https://toposel.com/case-study-big-growth-for-a-skincare-d2c-indian-brand/" 
+                        href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
                         Case Study: Big Growth for a Skincare D2C Indian Brand
