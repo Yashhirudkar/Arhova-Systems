@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["toposel.com", "source.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'arhovasystems.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'toposel.com',
+      },
+    ],
   },
   reactStrictMode: true,
 };

@@ -120,7 +120,7 @@ export default function Contact() {
 
                <section className="max-w-2xl mx-auto text-left mb-12">
           <p className="text-md text-gray-700">
-            We work with a limited number of brands to deliver focused, high-impact growth across performance marketing, retention, AI-led SEO, and custom development. If you're serious about scaling and ready for a strategic partner, we're currently evaluating new collaborations.
+           We partner with a select number of brands to deliver focused, high-impact growth through performance marketing, retention strategies, AI-driven SEO, and custom development. If you’re serious about scaling and seeking a strategic partner, we’re now reviewing new collaborations.
           </p>
         </section>
 
@@ -151,11 +151,10 @@ export default function Contact() {
     <div>
       <h3 className="text-xl font-semibold text-gray-800 mb-2">Operational Address</h3>
       <p className="text-gray-700 leading-relaxed">
-        Toposel, AIC Co working 483P-8672 2nd Floor, SVM's<br />
-        Naraee Monjee Institute of Management Studies, V. L.<br />
-        Vaisumhiai Mehta Rd, Naryyug Society, Naypada, Suvama<br />
-        Nagar, Vite Paile West, Mumbai, Maharashtra 400056
-      </p>
+  <strong>Arhova Systems</strong> <br />
+  Nagpur, Maharashtra, India – 440001
+</p>
+
     </div>
   </div>
 </div>

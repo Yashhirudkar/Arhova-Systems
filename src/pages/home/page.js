@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import OurPlatforms from "./OurPlatforms";
-import BlogSection from "./BlogSection";
 import GoogleReviews from "./GoogleReviews";
+import BlogSection from "./BlogSection";
+import CTASection from "@/components/ctasection/page";
 
 
 
@@ -28,26 +29,11 @@ export default function HomePage() {
       initial={{ opacity: 1, y: 40 }}
       animate={{ opacity: 1, y: 1 }}
       transition={{ duration: 1 }}
-      className="space-y-6 z-10">
-         <motion.div
-        animate={{ y: [0, -18, 0] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute bottom-58 -left-40 "
-      >
-
-        <Image
-          src="https://toposel.com/wp-content/uploads/2025/07/Ellipse-120.webp"
-          alt="Author"
-          width={180}
-          height={180}
-          className=""
-        />
-      </motion.div>
-        
-    <h1 className="text-[64px] font-semibold leading-[65px] text-[#090B0E]">
-  Empowering Digital Solutions for Your Business
-</h1>
-
+      className="space-y-6"
+    >
+      <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-black">
+        Empowering Digital Solutions for Your Business
+      </h1>
       <p className="text-lg text-gray-600 max-w-xl">
         Build, scale and transform your business with our innovative
         digital products and services.
@@ -509,7 +495,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
+<CTASection />
     </main>
   );
 }
