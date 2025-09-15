@@ -1,3 +1,12 @@
+import Head from 'next/head';
+
 export default function ServicesPage() {
-  return <div>Our Services</div>;
+  return (
+    <>
+      <Head>
+        <title>Our Services - Arhova Systems</title>
+      </Head>
+      <div>Our Services</div>
+    </>
+  );
 }
