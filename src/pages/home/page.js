@@ -211,9 +211,9 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
     <div className="text-gray-200">
       <div className="antialiased font-sans">
         {/* Hero Section */}
-        <section className="relative text-white py-12 md:py-24 lg:py-32 overflow-hidden">
+        <section className="relative text-white py-12 md:py-24 lg:py-32 overflow-hidden ">
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between z-10 relative px-4 sm:px-6 md:px-12 lg:px-24">
-            <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 ">
+            <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0  mt-6 lg:mt-0">
               <div className="flex items-center justify-center lg:justify-start mb-4 ">
                 <svg
                   className="w-5 h-5 text-green-500 mr-2"
