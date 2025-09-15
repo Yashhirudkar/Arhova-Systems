@@ -1,467 +1,861 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import OurPlatforms from "./OurPlatforms";
-import GoogleReviews from "./GoogleReviews";
-import BlogSection from "./BlogSection";
-import CTASection from "@/components/ctasection/page";
+'use client';
+
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination'; // Import pagination styles
+import { useEffect, useRef, useState } from 'react';
+import { FaArrowCircleRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Link from 'next/link';
+import CTASection from '@/components/ctasection/page';
+
+const platforms = [
+  { name: "Google Ads", img: "/66-removebg-preview.png" },
+  { name: "Facebook", img: "/facebook1-removebg-preview.png" },
+  { name: "Instagram", img: "/22-removebg-preview.png" },
+  { name: "YouTube", img: "/55-removebg-preview.png" },
+  { name: "Shopify", img: "/11-removebg-preview.png" },
+  { name: "LinkedIn", img: "/44-removebg-preview.png" },
+  { name: "Snapchat", img: "/Snapchat-removebg-preview.png" },
+];
 
 
+const heading = 'Unbeatable Growth Solutions';
 
-export default function HomePage() {
+// Counter component for animation
+const Counter = ({ to, prefix = '', suffix = '' }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+
+ 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            let start = 0;
+            const duration = 2000;
+            const step = Math.ceil(to / (duration / 10));
+
+            const timer = setInterval(() => {
+              start += step;
+              if (start > to) {
+                start = to;
+                clearInterval(timer);
+              }
+              setCount(start);
+            }, 10);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [to]);
+
   return (
-    <main className="min-h-screen font-sans text-gray-900 bg-white">
-      {/* HERO */}
- <section className="relative w-screen h-screen bg-gradient-to-r from-white to-slate-50 overflow-hidden flex items-center">
-  <div className="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-    
-    
-
-    {/* Left Content */}
-    
-    <motion.div
-      initial={{ opacity: 1, y: 40 }}
-      animate={{ opacity: 1, y: 1 }}
-      transition={{ duration: 1 }}
-      className="space-y-6 z-10">
-         <motion.div
-        animate={{ y: [0, -18, 0] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute bottom-58 -left-40 "
-      >
-
-        <Image
-          src="/Ellipse-120.webp"
-          alt="Author"
-          width={180}
-          height={180}
-          className=""
-        />
-      </motion.div>
-        
-    <h1 className="text-[64px] font-semibold leading-[65px] text-[#090B0E]">
- Arhova Systems<br/>
-Web & Digital Marketing Experts
-</h1>
-
-      <p className="text-lg text-gray-600 max-w-xl">
-        At Arhova Systems, we create strong digital experiences that help your business grow.
-From website design and development services to custom CRM solutions and
-ROI-driven marketing strategies, we deliver exactly what you need.
-      </p>
-
-      <div className="flex flex-wrap gap-3 items-center">
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-full shadow hover:shadow-lg transition"
-        >
-          Get in Touch
-        </a>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 border border-gray-300 text-gray-800 px-4 py-3 rounded-full hover:bg-indigo-600 hover:text-white"
-        >
-          Explore Our Services
-        </a>
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-green-500">
+        {prefix}
+        {count}
+        {suffix}
       </div>
-    </motion.div>
-
-    {/* Right Content - Hero Image with floating elements */}
-    <div className="relative w-full  flex justify-center items-center">
-      {/* Background Image */}
-      <Image
-        src="/header-imgbg-1.webp"
-        alt="Hero Background"
-        width={600}
-        height={500}
-        className="object-contain absolute z-10"
-      />
-
-      {/* Main Hero Image */}
-      <Image
-        src="/hero-image.webp"
-        alt="Hero Main"
-        width={500}
-        height={400}
-        className="relative z-10 rounded-2xl"
-        priority
-      />
-
-      {/* Floating Elements */}
-      <motion.div
-        animate={{ x: [0, -18, 0] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute -bottom-12 -left-30 "
-      >
-        <Image
-          src="/header-author-img1.webp"
-          alt="Author"
-          width={190}
-          height={180}
-          className="rounded-full border-4 border-white"
-        />
-      </motion.div>
-
-      <motion.div
-        animate={{ y: [0, 20, 0] }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        className="absolute top-10 left-12"
-      >
-        <Image
-          src="/instagram.png"
-          alt="Instagram"
-          width={45}
-          height={45}
-        />
-      </motion.div>
-
-      <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-        className="absolute bottom-16 right-20"
-      >
-        <Image
-          src="/facebook-1.png"
-          alt="Facebook"
-          width={45}
-          height={45}
-        />
-      </motion.div>
-
-      <motion.div
-        animate={{ y: [0, 25, 0] }}
-        transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
-        className="absolute top-6 right-10"
-      >
-        <Image
-          src="/Ellipse-120.webp"
-          alt="Ellipse"
-          width={60}
-          height={60}
-        />
-      </motion.div>
-
-      {/* Extra Small Floating Shapes */}
-      <motion.div
-        animate={{ y: [0, -18, 0] }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        className="absolute bottom-24 left-32"
-      >
-        <Image
-          src="/adwords.png"
-          alt="Small Shape"
-          width={40}
-          height={40}
-        />
-      </motion.div>
-
-      <motion.div
-        animate={{ y: [0, 15, 0] }}
-        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        className="absolute top-24 right-32"
-      >
-        <Image
-          src="/Ellipse-120.webp"
-          alt="Small Shape"
-          width={35}
-          height={35}
-        />
-      </motion.div>
-      {/* / */}
     </div>
-  </div>
-</section>
+  );
+};
 
-<OurPlatforms />
+export default function Home() {
+  const [activeTab, setActiveTab] = useState(0);
+  const reviews = [
+    {
+      name: 'Vivek Mohanta',
+      date: '2024-04-24',
+      content: 'good marketing consultancy provided',
+    },
+    {
+      name: 'Dibya Devidutta Nayak',
+      date: '2024-04-23',
+      content:
+        'It has honestly been an honor to work with the team here. they are dedicated and responsible and are personally invested in the brand.',
+    },
+    {
+      name: 'Broscience',
+      date: '2024-04-23',
+      content: 'great service, roi improved',
+    },
+    {
+      name: 'Arya Aditya Dash',
+      date: '2024-04-23',
+      content:
+        'game changer. I want to thank Vipa who helped in achieving an impressive ROAS, giving us a competitive edge in the market. Highly recommended!',
+    },
+  ];
+
+  const recommendations = [
+    {
+      id: 1,
+      name: "Mihir Gadani (MG)",
+      position: "Co-Founder at OZiva, Building India's Leading Clean & Plant based Nutrition brand",
+      content: "Working with Ashish at Arhova Systems has been an incredible experience. From the early stages of the company, he consistently demonstrated exceptional vision, technical expertise, and a relentless drive to solve problems. His ability to navigate challenges, manage projects efficiently, and deliver high-quality solutions is truly impressive. Ashish combines creativity with strategic thinking, always keeping the bigger picture in mind while handling the details with precision. What stands out most is his dedication to innovation and continuous learning, ensuring that Arhova Systems stays ahead in a fast-paced industry. Collaborating with him has been inspiring, and anyone who works with Ashish can expect professionalism, insight, and a strong commitment to excellence.",
+      avatar: "/ecom3.png", // Replace with actual image path
+      connection: "3rd"
+    },
+     {
+      id: 1,
+      name: "yash Gadani (MG)",
+      position: "Co-Founder at OZiva, Building India's Leading Clean & Plant based Nutrition brand",
+      content: "Working with Ashish at Arhova Systems has been an incredible experience. From the early stages of the company, he consistently demonstrated exceptional vision, technical expertise, and a relentless drive to solve problems. His ability to navigate challenges, manage projects efficiently, and deliver high-quality solutions is truly impressive. Ashish combines creativity with strategic thinking, always keeping the bigger picture in mind while handling the details with precision. What stands out most is his dedication to innovation and continuous learning, ensuring that Arhova Systems stays ahead in a fast-paced industry. Collaborating with him has been inspiring, and anyone who works with Ashish can expect professionalism, insight, and a strong commitment to excellence.",
+      avatar: "/ecom3.png", // Replace with actual image path
+      connection: "3rd"
+    },
+    {
+  id: 3,
+  name: "Karan Malhotra",
+  position: "Founder & CEO at TechSage, Driving AI-First Digital Products",
+  content: "Ashish is one of those rare professionals who can combine technical depth with a strong sense of business strategy. During our collaboration, he demonstrated a unique ability to anticipate potential bottlenecks and proactively provide scalable solutions. His leadership style is calm, composed, and inspiring — he motivates his team to perform at their best. The work delivered by Arhova Systems under his guidance was robust, reliable, and aligned perfectly with our growth roadmap. Ashish is a true partner who cares deeply about the success of the businesses he works with.",
+  avatar: "/ecom5.png", // Replace with actual image path
+  connection: "3rd"
+},
+{
+  id: 4,
+  name: "Sneha Verma",
+  position: "Head of Digital Marketing at Nykaa, Scaling Brand Engagement",
+  content: "I had the privilege of working closely with Ashish on a complex digital ecosystem project, and I can confidently say that he exceeded all expectations. His attention to detail, commitment to timelines, and ability to translate marketing needs into seamless tech solutions were outstanding. Ashish was quick to adapt to changing requirements and provided valuable suggestions that improved the end product. His collaborative nature made the entire process smooth and efficient. If you are looking for a tech partner who can bring your ideas to life, Ashish is the right person.",
+  avatar: "/ecom6.png", // Replace with actual image path
+  connection: "2nd"
+},
+{
+  id: 5,
+  name: "Rohit Kulkarni",
+  position: "CTO at FinEdge Solutions, Building Scalable Fintech Platforms",
+  content: "Ashish and his team at Arhova Systems played a crucial role in the successful launch of our fintech platform. His technical knowledge is top-notch, but what really sets him apart is his strategic mindset. He focuses on building solutions that not only solve current challenges but also prepare the business for future growth. His dedication, responsiveness, and ability to stay calm under pressure made him a trusted partner throughout the project. I look forward to working with him again on future initiatives.",
+  avatar: "/ecom7.png", // Replace with actual image path
+  connection: "1st"
+},
+{
+  id: 6,
+  name: "Ananya Desai",
+  position: "Entrepreneur & Angel Investor, Supporting Early-Stage Startups",
+  content: "Ashish brings a refreshing mix of innovation, discipline, and customer-centric thinking to every project he undertakes. I’ve seen him manage complex deliverables with grace while ensuring that quality remains uncompromised. His solutions are thoughtfully crafted and always aligned with long-term business objectives. Beyond just delivering technology, Ashish also acts as a trusted advisor, helping founders make informed decisions about product direction and scalability. He is an invaluable asset to any organization looking to grow in today’s competitive digital landscape.",
+  avatar: "/ecom8.png", // Replace with actual image path
+  connection: "3rd"
+}
+
+  ];
+const [activeIndex, setActiveIndex] = useState(0);
+const [currentRecIndex, setCurrentRecIndex] = useState(0);
+const [screenSize, setScreenSize] = useState("lg"); // "sm" | "md" | "lg"
+
+// Detect screen size (mobile, md, or large)
+useEffect(() => {
+  const checkScreen = () => {
+    if (window.innerWidth < 768) setScreenSize("sm");
+    else if (window.innerWidth < 1024) setScreenSize("md");
+    else setScreenSize("lg");
+  };
+  checkScreen();
+  window.addEventListener("resize", checkScreen);
+  return () => window.removeEventListener("resize", checkScreen);
+}, []);
+
+// Calculate number of visible items based on screen size
+const itemsToShow = screenSize === "sm" ? 3 : 5;
+
+// Prev & Next Handlers
+const handlePrev = () => {
+  setActiveIndex((prev) =>
+    prev === 0 ? platforms.length - itemsToShow : prev - 1
+  );
+};
+
+const handleNext = () => {
+  setActiveIndex((prev) =>
+    prev >= platforms.length - itemsToShow ? 0 : prev + 1
+  );
+};
+
+// Select visible platforms dynamically
+const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow);
+
+  const handleSelectChange = (e) => {
+    const value = e.target.value;
+    const additionalFields = document.querySelector('.additional-fields');
+    if (additionalFields) {
+      if (value !== 'I need help with') {
+        additionalFields.style.display = 'block';
+      } else {
+        additionalFields.style.display = 'none';
+      }
+    }
+  };
+
+  return (
+    <div className="text-gray-200">
+      <div className="antialiased font-sans">
+        {/* Hero Section */}
+        <section className="relative text-white py-12 md:py-24 lg:py-32 overflow-hidden">
+          <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between z-10 relative px-4 sm:px-6 md:px-12 lg:px-24">
+            <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 ">
+              <div className="flex items-center justify-center lg:justify-start mb-4 ">
+                <svg
+                  className="w-5 h-5 text-green-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                <span className="text-sm font-semibold text-green-500">
+                  Meta and Google Certified Consultants
+                </span>
+              </div>
+                                                  <h1
+                                className="
+                                  font-semibold
+                                  text-[34px] leading-[38px]   /* mobile default */
+                                  sm:text-[44px] sm:leading-[48px]  /* tablets */
+                                  md:text-[54px] md:leading-[58px]  /* small laptops */
+                                  lg:text-[64px] lg:leading-[65px]  /* large screens */
+                                "
+                              >
+                                <span className="inline-block mr-2 animate-fadeInUp text-black" style={{ animationDelay: '0s' }}>
+                                  Building Future-Ready
+                                </span>
+                                <span className="inline-block mr-2 animate-fadeInUp text-black" style={{ animationDelay: '0.2s' }}>
+                                  Digital Ecosystems
+                                </span>
+                                <span className="inline-block mr-2 animate-fadeInUp text-black" style={{ animationDelay: '0.4s' }}>
+                                 for Your 
+                                </span>
+                                <span className="inline-block mr-2 animate-fadeInUp text-black" style={{ animationDelay: '0.6s' }}>
+                                  Business
+                                </span>
+                              </h1>
 
 
-{/* about section */}
+              <p
+                className="mt-4 text-lg md:text-xl text-gray-400 animate-fadeInUp"
+                style={{ animationDelay: '0.8s' }}
+              >
+                Our expertise in performance marketing, AI optimization, CRO, and custom development helps your brand stay ahead in the digital world.
+              </p>
 
-<section className="relative bg-gradient-to-r from-purple-50 to-blue-50 py-20 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-    
-    {/* Left Image - Circle */}
-    <motion.div
-      initial={{ opacity: 0, x: -60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="flex justify-center"
-    >
-      <Image
-        src="/entertainer-presenting-tablet-from-sponsor-1.webp"
-        alt="Author Image Left"
-        width={280}
-        height={380}
-        className="rounded-full object-cover shadow-lg"
-      />
-    </motion.div>
+                            <div
+                  className="mt-8 flex flex-row space-x-4 justify-center lg:justify-start animate-fadeInUp"
+                  style={{ animationDelay: '1s' }}
+                >
+                  <a
+                    href="/web-development"
+                    className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 transition duration-300 font-bold text-white flex items-center justify-center"
+                  >
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    Our Services
+                  </a>
+                  <a
+                    href="/contact"
+                    className="px-6 py-3 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300 font-bold text-white flex items-center justify-center"
+                  >
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    Contact Now
+                  </a>
+                </div>
 
-    {/* Text Center */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="text-center lg:text-left"
-    >
-      <h2 className="text-3xl font-bold text-gray-900 leading-tight">
-        Industries We Empower
-      </h2>
-      <p className="mt-4 text-lg text-gray-600">
-       From startups to established brands, we offer web development, CRM development, and digital marketing strategies that drive growth. No pressure, no sales pitches, just an open discussion about developing the best solution for your company.
-      </p>
-
-      <motion.a
-        href="#"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:shadow-xl transition"
-      >
-        Contact Us <span className="text-xl">➜</span>
-      </motion.a>
-    </motion.div>
-
-    {/* Right Image - Rounded Rectangle */}
-    <motion.div
-      initial={{ opacity: 0, x: 60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="flex justify-center"
-    >
-      <Image
-        src="/Frame-1437254183.webp"
-        alt="Author Image Right"
-        width={320}
-        height={590}
-        className="rounded-3xl object-cover shadow-lg"
-      />
-    </motion.div>
-  </div>
-</section>
-
-
-
-
-      {/* SERVICES / FEATURES */}
-      {/* <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12"
-        >
-          Our Solutions
-        </motion.h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Web Development",
-              desc: "Responsive, fast and scalable websites.",
-              img: "/images/web.png",
-            },
-            {
-              title: "Mobile Apps",
-              desc: "Cross-platform apps for Android & iOS.",
-              img: "/images/app.png",
-            },
-            {
-              title: "Cloud Solutions",
-              desc: "Secure and scalable cloud infrastructure.",
-              img: "/images/cloud.png",
-            },
-          ].map((f, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="p-6 rounded-xl border bg-white shadow hover:shadow-lg transition"
-            >
+            </div>
+            <div className="lg:w-1/2 relative mt-10 lg:mt-0">
               <Image
-                src={f.img}
-                alt={f.title}
-                width={60}
-                height={60}
-                className="mb-4"
+                src="/hero-image.webp"
+                alt="Digital marketing agency services"
+                width={900}
+                height={727}
+                className="relative z-10 w-full rounded-md"
               />
-              <h3 className="font-semibold text-lg">{f.title}</h3>
-              <p className="mt-2 text-gray-500">{f.desc}</p>
-            </motion.div>
-          ))}
+              <Image
+                src="/header-author-img1.webp"
+                alt="Report icon"
+                width={240}
+                height={223}
+                className="absolute bottom-5 left-0 animate-pulse-slow hidden lg:block"
+              />
+              <Image
+                src="/instagram.png"
+                alt="Instagram icon"
+                width={50}
+                height={50}
+                className="absolute top-10 left-5 transform rotate-15 animate-spin-slow hidden lg:block"
+              />
+              <Image
+                src="/facebook-1.png"
+                alt="Facebook icon"
+                width={50}
+                height={50}
+                className="absolute top-20 right-5 transform rotate-10 animate-spin-slow hidden lg:block"
+              />
+              <Image
+                src="/shopify.png"
+                alt="Shopify icon"
+                width={50}
+                height={50}
+                className="absolute bottom-5 right-20 transform -rotate-10 animate-spin-slow hidden lg:block"
+              />
+              <Image
+                src="/adwords.png"
+                alt="AdWords icon"
+                width={50}
+                height={50}
+                className="absolute bottom-10 left-40 transform -rotate-15 animate-spin-slow hidden lg:block"
+              />
+              <Image
+                src="/Ellipse-120.webp"
+                alt="Ellipse"
+                width={198}
+                height={198}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fadeInUp hidden lg:block"
+              />
+            </div>
+          </div>
+        </section>   
+
+
+ <div className="flex flex-col md:flex-row items-center justify-center p-4">
+          {/* Left Image */}
+          <div className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
+            <Image
+              src="/entertainer-presenting-tablet-from-sponsor-1.webp"
+              alt="Left Image"
+              width={250}
+              height={420}
+              className="rounded-[200px] object-cover object-center w-[250px] h-[420px]"
+            />
+          </div>
+
+          {/* Middle Text */}
+          <div className="flex-1 text-center md:text-left px-4 md:px-10 md:ml-10">
+            <h1 className="text-3xl text-black font-bold mb-4">
+              Unbeatable Growth Solutions
+            </h1>
+            <p className="text-gray-700 mb-6">
+              Arhova Systems is a technology-driven digital agency delivering best-in-class services to help your business scale across the digital landscape. Our approach combines data, creativity, and AI-powered solutions to drive measurable growth and lasting impact.
+            </p>
+           <Link
+                href="/contact"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-300"
+              >
+                <FaArrowCircleRight className="mr-2" />
+                <span>Contact Us</span>
+              </Link>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex-1 flex justify-center md:justify-start mt-8 md:mt-0">
+            <Image
+             src="/entertainer-presenting-tablet-from-sponsor-1.webp"
+              alt="Right Image"
+              width={250}
+              height={420}
+              className="rounded-[200px] object-cover object-center w-[250px] h-[420px]"
+            />
+          </div>
         </div>
-      </section> */}
 
-   {/* rrr */}
-   {/* BEST-IN-CLASS GROWTH SERVICES SECTION */}
-{/* BEST-IN-CLASS GROWTH SERVICES SECTION */}
-<section className="relative bg-gray-50 from-purple-50 to-blue-50 py-20">
-  <motion.h2
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-3xl font-bold text-center mb-6 text-gray-900"
+  <section className="bg-[#F5F3FF] py-6 w-full">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 space-y-4 md:space-y-0 md:space-x-8">
+        {/* Heading */}
+        <h3 className="text-sm md:text-base font-semibold tracking-wide text-gray-800 text-center md:text-left">
+          OUR PLATFORMS
+        </h3>
+
+        {/* Stepper Container */}
+        <div className="flex items-center w-full md:w-auto justify-between md:justify-center">
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className="text-gray-600 hover:text-gray-900 transition p-2"
+          >
+            <FaChevronLeft size={20} />
+          </button>
+
+          {/* Platform Images */}
+          <div className="flex items-center justify-center space-x-8 overflow-hidden px-2 md:px-2">
+            {visiblePlatforms.map((platform, index) => (
+              <div
+                key={platform.name}
+                className={`flex-shrink-0 flex flex-col items-center transition-opacity duration-300 ${
+                  index === 0 ? "opacity-100" : "opacity-80"
+                }`}
+              >
+                <Image
+                  src={platform.img}
+                  alt={platform.name}
+                  width={90}
+                  height={40}
+                  className="object-contain max-w-[70px] sm:max-w-[80px] md:max-w-[100px]"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="text-gray-600 hover:text-gray-900 transition p-2"
+          >
+            <FaChevronRight size={20} />
+          </button>
+        </div>
+      </div>
+    </section>
+
+{/* CTA Section */}
+          <section className="py-16 md:py-24" id="services">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="section-heading animate-fadeInUp text-[#090B0E] text-[32px] md:text-[44px] font-semibold leading-tight md:leading-[48px]">
+              Best-in-Class Growth Services
+            </h2>
+
+            <p className="mt-4 text-sm md:text-lg text-[#3D4C5E] max-w-2xl mx-auto animate-fadeInUp">
+              Unlock your brand’s full potential with performance-driven
+              solutions—ranging from paid ads to CRO, content, and
+              automation—to accelerate scale and maximize ROI.
+            </p>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
+              {/* Box 1 */}
+              <div className="p-7 border border-gray-300 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fadeInUp max-w-lg mx-auto md:mr-1 md:ml-auto">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 text-purple-500 bg-purple-400 p-4 rounded-full">
+                    <i className="fas fa-user-friends text-xl"></i>
+                  </div>
+                  <div className="ml-4 text-left text-[#090B0E]">
+                    <h3 className="text-xl font-bold">Web Development</h3>
+                  </div>
+                </div>
+                <p className="mt-4 text-left text-[#3D4C5E]">
+                  Build fast, scalable, and custom websites that deliver seamless user experiences and align perfectly with your business goals.
+                </p>
+              </div>
+
+              {/* Box 2 */}
+              <div className="p-7 border border-gray-300 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fadeInUp max-w-lg mx-auto md:ml-1 md:mr-auto">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 text-purple-500 bg-purple-400 p-4 rounded-full">
+                    <i className="fas fa-search text-xl"></i>
+                  </div>
+                  <div className="ml-4 text-left">
+                    <h3 className="text-xl font-bold text-[#090B0E]">
+                     CRM Development
+                    </h3>
+                  </div>
+                </div>
+                <p className="mt-4 text-left text-[#3D4C5E]">
+                 Implement tailored CRM solutions to streamline operations, improve customer relationships, and boost overall efficiency.
+                </p>
+              </div>
+
+              {/* Box 3 */}
+              <div className="p-7 border border-gray-300 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fadeInUp max-w-lg mx-auto md:mr-1 md:ml-auto">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 text-purple-500 bg-purple-400 p-4 rounded-full">
+                    <i className="fas fa-chart-line text-xl"></i>
+                  </div>
+                  <div className="ml-4 text-left">
+                    <h3 className="text-xl font-bold text-[#090B0E]">
+                      Digital Marketing
+                    </h3>
+                  </div>
+                </div>
+                <p className="mt-4 text-left text-[#3D4C5E]">
+                  Drive measurable growth with performance-focused strategies, including paid ads, content marketing, automation, and retention campaigns.
+                </p>
+              </div>
+
+              {/* Box 4 */}
+              <div className="p-7 border border-gray-300 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fadeInUp max-w-lg mx-auto md:ml-1 md:mr-auto">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 text-purple-500 bg-purple-400 p-4 rounded-full">
+                    <i className="fas fa-laptop-code text-xl"></i>
+                  </div>
+                  <div className="ml-4 text-left">
+                    <h3 className="text-xl font-bold text-[#090B0E]">
+                     SEO & AI Optimization
+                    </h3>
+                  </div>
+                </div>
+                <p className="mt-4 text-left text-[#3D4C5E]">
+                 Ensure your brand is discoverable and visible, leveraging both traditional SEO and AI-powered techniques to reach your audience effectively.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-4 mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-300"
+              >
+                <FaArrowCircleRight className="mr-2" />
+                <span>Contact Us</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+  <div className="max-w-4xl mx-auto px-4 py-8">
+  <h2
+    className="text-center mb-3 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[44px] leading-tight"
+    style={{ fontSize: "44px", lineHeight: "48px", color: "#1f2937" }}
   >
-    Growth Solutions That Deliver, Not Just Promise
-  </motion.h2>
+    LinkedIn Recommendations
+  </h2>
 
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: 0.1 }}
-    viewport={{ once: true }}
-    className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
-  >
-    utting-edge paid advertising, CRO, content strategy, and automation—all designed around your vision. We build what works, not what fits a template. Maximize ROI. Scale with confidence.
-  </motion.p>
+  <p className="text-center text-gray-600 mb-8">
+    See what industry leaders have to say about our founders
+  </p>
 
-  <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
-    {[
-      {
-        title: "CRM Development",
-        desc: "We provide CRM development services that enhance workflows, strengthen customer connections, and integrate data with CRM to help businesses thrive.",
-        icon: "fas fa-user-friends",
-      },
-      {
-        title: "Digital Marketing",
-        desc: "Our digital marketing professionals create strategies for digital lead generation, social media marketing, and ROI-oriented campaigns that attract, engage, and convert audiences.",
-        icon: "fas fa-chart-line",
-      },
-      {
-        title: "Performance Marketing & CRO",
-        desc: "Drive measurable growth through data-backed ad campaigns and continuous conversion rate optimization.",
-        icon: "fas fa-bullhorn",
-      },
-      {
-        title: "Website/Software Development",
-        desc: "Your website represents your first impression. Our web development service creates quick, scalable, and visually appealing websites that turn visitors into loyal clients..",
-        icon: "fas fa-laptop-code",
-      },
-    ].map((service, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: i * 0.1 }}
-        viewport={{ once: true }}
-        className="flex gap-5 p-8 border rounded-lg  shadow-md hover:shadow-xl transition"
+  {recommendations.length > 0 && (
+    <div className="mb-10 relative flex items-center justify-center">
+      {/* Left Button */}
+      <button
+        onClick={() =>
+          setCurrentRecIndex((prev) =>
+            prev === 0 ? recommendations.length - 1 : prev - 1
+          )
+        }
+        className="absolute left-0 text-gray-600 hover:text-gray-900 transition p-2"
       >
-        {/* Icon with background */}
-        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-2xl flex-shrink-0 shadow">
-          <i className={service.icon}></i>
-        </div>
+        <FaChevronLeft size={24} />
+      </button>
 
-        {/* Text */}
-        <div>
-          <h3 className="font-semibold text-lg text-gray-900">
-            {service.title}
+      {/* Testimonial Content */}
+      <div className="flex-1 max-w-2xl">
+        <div className="flex flex-col justify-center items-center gap-2">
+          <div className="relative w-20 h-20">
+            <Image
+              src={recommendations[currentRecIndex].avatar}
+              alt={recommendations[currentRecIndex].name}
+              fill
+              className="rounded-full object-cover"
+            />
+          </div>
+          <h3 className="font-semibold text-gray-900 text-center -mb-1">
+            {recommendations[currentRecIndex].name}
           </h3>
-          <p className="mt-2 text-gray-600 text-sm">{service.desc}</p>
+          <p className="text-sm text-gray-600 text-center">
+            {recommendations[currentRecIndex].position}
+          </p>
         </div>
-      </motion.div>
-    ))}
-  </div>
-</section>
 
-{/* google review */}
+        <div className="mt-3 p-4 rounded-md bg-[#f8f8f8] text-black leading-relaxed text-center">
+          <p>{recommendations[currentRecIndex].content}</p>
+        </div>
 
+        {/* Counter */}
+        <span className="block text-center text-sm text-gray-600 mt-3">
+          {currentRecIndex + 1} / {recommendations.length}
+        </span>
+      </div>
 
-
-<GoogleReviews />
-{/* google review end */}
-
-
-
-      
-      {/* BLOG */}
-      
-      <BlogSection />
-
-      {/* CTA */}
-      <section className="relative bg-gradient-to-r from-indigo-50 to-white py-20 px-6 lg:px-20">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    
-    {/* Left Content */}
-    <div className="space-y-6">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-        Get In Touch With Us Today
-      </h2>
-      <p className="text-lg text-gray-600">
-        We collaborate with ambitious brands ready to scale. Share your details and our experts will connect with you to craft tailored strategies for success.
-      </p>
-      <ul className="space-y-3 text-gray-700">
-        <li className="flex items-center gap-2">
-          <i className="fas fa-check-circle text-indigo-600"></i> 
-          ROI-driven performance marketing
-        </li>
-        <li className="flex items-center gap-2">
-          <i className="fas fa-check-circle text-indigo-600"></i> 
-          Scalable website & CRM solutions
-        </li>
-        <li className="flex items-center gap-2">
-          <i className="fas fa-check-circle text-indigo-600"></i> 
-          Data-driven Google Ads campaigns
-        </li>
-      </ul>
+      {/* Right Button */}
+      <button
+        onClick={() =>
+          setCurrentRecIndex((prev) =>
+            prev === recommendations.length - 1 ? 0 : prev + 1
+          )
+        }
+        className="absolute right-0 text-gray-600 hover:text-gray-900 transition p-2"
+      >
+        <FaChevronRight size={24} />
+      </button>
     </div>
+  )}
+</div>
 
-    {/* Right Side - Form */}
-    <div className="bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
-      <form className="space-y-5">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Name</label>
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            placeholder="you@example.com"
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Phone</label>
-          <input
-            type="text"
-            placeholder="+91 9876543210"
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Message</label>
-          <textarea
-            rows="4"
-            placeholder="Tell us about your project..."
-            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-indigo-600 text-white py-3 rounded-lg font-medium shadow hover:bg-indigo-700 transition"
-        >
-          Submit
-        </button>
-      </form>
+
+ {/* Blog Posts Section */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="section-heading animate-fadeInUp text-[32px] md:text-[44px] font-semibold leading-tight md:leading-[48px] text-[#090B0E]">
+              Our Latest Blog Posts
+            </h2>
+            <p className="mt-4 max-w-[1200px] mx-auto animate-fadeInUp text-[14px] md:text-[16px] font-normal leading-[24px] text-[#3D4C5E]">
+              Explore real-world case studies and expert insights that showcase
+              how we help brands grow. From scaling D2C revenue with performance
+              marketing to optimizing customer retention, our blog brings you
+              actionable strategies and proven results from the field.
+            </p>
+
+            <div className="w-full mt-8 px-4 md:px-20 lg:px-40">
+              {/* Blog Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Blog Post 1 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl ">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="https://picsum.photos/400/250?random"
+                      alt="Is Google Search Still Relevant in 2025? The Truth About Search Trends"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
+                      <a href=" ">
+                        Is Google Search Still Relevant in 2025? The Truth About
+                        Search Trends
+                      </a>
+                    </h3>
+                    <div className="flex items-center text-sm text-gray-500 mb-3 ">
+                      <span className="flex items-center mr-4">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          ></path>
+                        </svg>
+                        Bara
+                      </span>
+                      <span className="flex items-center">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                        March 3, 2025
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mb-4 text-left">
+                      Is Google Search Dying Out? For years, Google Search has
+                      been the go-to for finding...
+                    </p>
+                    <a
+                      href=" "
+                      className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+                    >
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                      </svg>
+                      Read More
+                    </a>
+                  </div>
+                </div>
+                {/* Blog Post 2 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl ">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="https://picsum.photos/400/250?random"
+                      alt="Is Google Search Still Relevant in 2025? The Truth About Search Trends"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
+                      <a href=" ">
+                        Is Google Search Still Relevant in 2025? The Truth About
+                        Search Trends
+                      </a>
+                    </h3>
+                    <div className="flex items-center text-sm text-gray-500 mb-3 ">
+                      <span className="flex items-center mr-4">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          ></path>
+                        </svg>
+                        Bara
+                      </span>
+                      <span className="flex items-center">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                        March 3, 2025
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mb-4 text-left">
+                      Is Google Search Dying Out? For years, Google Search has
+                      been the go-to for finding...
+                    </p>
+                    <a
+                      href=" "
+                      className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+                    >
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                      </svg>
+                      Read More
+                    </a>
+                  </div>
+                </div>
+                {/* Blog Post 3 */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl ">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="https://picsum.photos/400/250?random"
+                      alt="Is Google Search Still Relevant in 2025? The Truth About Search Trends"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
+                      <a href=" ">
+                        Is Google Search Still Relevant in 2025? The Truth About
+                        Search Trends
+                      </a>
+                    </h3>
+                    <div className="flex items-center text-sm text-gray-500 mb-3 ">
+                      <span className="flex items-center mr-4">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          ></path>
+                        </svg>
+                        Bara
+                      </span>
+                      <span className="flex items-center">
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                        March 3, 2025
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mb-4 text-left">
+                      Is Google Search Dying Out? For years, Google Search has
+                      been the go-to for finding...
+                    </p>
+                    <a
+                      href=" "
+                      className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+                    >
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                      </svg>
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-</section>
-<CTASection />
-    </main>
   );
 }
