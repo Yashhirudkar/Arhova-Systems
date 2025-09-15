@@ -188,13 +188,13 @@ export default function Header() {
             >
               Blog
             </Link>
-            <Link
+            {/* <Link
               href="/shop"
               className="text-black hover:text-purple-500 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Shop
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="text-black hover:text-purple-500 text-lg"
