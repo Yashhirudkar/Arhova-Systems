@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import Link from 'next/link';
-import { heading } from '../data';
+import { heading } from '../../../data/homeData';
 
 export default function AboutSection() {
   return (

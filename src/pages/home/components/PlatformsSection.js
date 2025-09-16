@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import { platforms } from '../data';
+import { platforms } from '../../../data/homeData';
 
 export default function PlatformsSection() {
   const [activeTab, setActiveTab] = useState(0);

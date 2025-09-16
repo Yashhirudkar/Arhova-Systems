@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useState } from 'react';
-import { recommendations } from '../data';
+import { recommendations } from '../../../data/homeData';
 
 export default function RecommendationsSection() {
   const [currentRecIndex, setCurrentRecIndex] = useState(0);
