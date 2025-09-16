@@ -637,8 +637,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
                       <a href=" ">
-                        Is Google Search Still Relevant in 2025? The Truth About
-                        Search Trends
+                        AI + Human Creativity: The Perfect Duo for 2025
                       </a>
                     </h3>
                     <div className="flex items-center text-sm text-gray-500 mb-3 ">
@@ -656,7 +655,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           ></path>
                         </svg>
-                        Bara
+                        lara
                       </span>
                       <span className="flex items-center">
                         <svg
@@ -676,8 +675,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                       </span>
                     </div>
                     <p className="text-gray-600 mb-4 text-left">
-                      Is Google Search Dying Out? For years, Google Search has
-                      been the go-to for finding...
+                      AI tools are everywhere, but they can’t replace human insight. Discover how businesses ...
                     </p>
                     <a
                       href=" "
@@ -712,8 +710,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
                       <a href=" ">
-                        Is Google Search Still Relevant in 2025? The Truth About
-                        Search Trends
+                        Why Website Speed Is Your New Competitive Edge
                       </a>
                     </h3>
                     <div className="flex items-center text-sm text-gray-500 mb-3 ">
@@ -731,7 +728,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           ></path>
                         </svg>
-                        Bara
+                        Tom 
                       </span>
                       <span className="flex items-center">
                         <svg
@@ -751,8 +748,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                       </span>
                     </div>
                     <p className="text-gray-600 mb-4 text-left">
-                      Is Google Search Dying Out? For years, Google Search has
-                      been the go-to for finding...
+                      If your site takes longer than 3 seconds to load, you’re losing customers. Learn how optimizing for speed can..
                     </p>
                     <a
                       href=" "
@@ -787,8 +783,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 text-black text-left transition-colors">
                       <a href=" ">
-                        Is Google Search Still Relevant in 2025? The Truth About
-                        Search Trends
+                        The Social Media Discovery Shift in 2025
                       </a>
                     </h3>
                     <div className="flex items-center text-sm text-gray-500 mb-3 ">
@@ -806,7 +801,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           ></path>
                         </svg>
-                        Bara
+                        David
                       </span>
                       <span className="flex items-center">
                         <svg
@@ -826,8 +821,7 @@ const visiblePlatforms = platforms.slice(activeIndex, activeIndex + itemsToShow)
                       </span>
                     </div>
                     <p className="text-gray-600 mb-4 text-left">
-                      Is Google Search Dying Out? For years, Google Search has
-                      been the go-to for finding...
+                      Search isn’t just on Google anymore — consumers are discovering brands through Instagram, LinkedIn, and TikTok..
                     </p>
                     <a
                       href=" "

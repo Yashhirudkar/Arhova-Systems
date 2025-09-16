@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="p-6">
             <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
               <a href=" ">
-                Is Google Search Still Relevant in 2025? The Truth About Search Trends
+                5 Ways Digital Ecosystems Are Changing Business in 2025
               </a>
             </h3>
             <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -71,7 +71,7 @@ export default function Contact() {
                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                 </svg>
-                Bara
+                Ashish 
               </span>
               <span className="flex items-center">
                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ export default function Contact() {
               </span>
             </div>
             <p className="text-gray-600 mb-4">
-              Is Google Search Dying Out? For years, Google Search has been the go-to for finding...
+             The business world is evolving faster than ever — and companies that don’t adapt risk falling behind. In 2025...
             </p>
             <a 
               href=" " 
@@ -109,7 +109,7 @@ export default function Contact() {
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
       <a href=" ">
-        Online Ads and Information Overload: Impact on the Consumer Behaviour
+    The Rise of Digital Minimalism: Why Less is More for Consumers in 2025
       </a>
     </h3>
     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -117,7 +117,7 @@ export default function Contact() {
         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
         </svg>
-        Bara
+        Akhilesh
       </span>
       <span className="flex items-center">
         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ export default function Contact() {
       </span>
     </div>
     <p className="text-gray-600 mb-4">
-      We're constantly bombarded with information from all directions—social media updates...
+      In a world where every scroll, click, and tap comes with a new notification, consumers are starting to push back. Digital minimalism..
     </p>
     <a 
       href=" " 
@@ -154,7 +154,7 @@ export default function Contact() {
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
       <a href=" ">
-        Case Study: Transforming Website Performance at arhovasystems
+       Building Smarter CRMs: The Secret to Customer Loyaltys
       </a>
     </h3>
     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -162,7 +162,7 @@ export default function Contact() {
         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
         </svg>
-        Vipa J
+        Ritesh
       </span>
       <span className="flex items-center">
         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +172,7 @@ export default function Contact() {
       </span>
     </div>
     <p className="text-gray-600 mb-4">
-      Introduction At arhovasystems, we pride ourselves on delivering top-notch website...
+      A CRM isn’t just a database — it’s the brain of your business. Here’s how modern CRMs can predict customer needs, automate follow-ups, and drive repeat revenue..
     </p>
     <a 
       href=" " 
@@ -199,7 +199,7 @@ export default function Contact() {
   <div className="p-6">
     <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
       <a href=" ">
-        Case Study: Big Growth for a Skincare D2C Indian Brand
+        AI + Human Creativity: The Perfect Duo for 2025...
       </a>
     </h3>
     <div className="flex items-center text-sm text-gray-500 mb-3">
@@ -217,7 +217,7 @@ export default function Contact() {
       </span>
     </div>
     <p className="text-gray-600 mb-4">
-      Overview Last month, our brand saw amazing growth in online sessions and sales. We...
+      AI tools are everywhere, but they can’t replace human insight. Discover how businesses are combining AI speed with human strategy to build powerful campaigns....
     </p>
     <a 
       href=" " 
@@ -293,7 +293,7 @@ export default function Contact() {
                         href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
-                        Is Google Search Still Relevant in 2025? The Truth About Search Trends
+                       5 Ways Digital Ecosystems Are Changing Business in 2025
                       </a>
                       <p className="text-sm text-gray-500">March 3, 2025</p>
                     </div>
@@ -311,7 +311,7 @@ export default function Contact() {
                         href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
-                        Online Ads and Information Overload: Impact on the Consumer Behaviour
+                        The Rise of Digital Minimalism: Why Less is More for Consumers in 2025
                       </a>
                       <p className="text-sm text-gray-500">February 26, 2025</p>
                     </div>
@@ -329,7 +329,7 @@ export default function Contact() {
                         href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
-                        Case Study: Transforming Website Performance at arhovasystems
+                        Building Smarter CRMs: The Secret to Customer Loyaltys
                       </a>
                       <p className="text-sm text-gray-500">July 16, 2024</p>
                     </div>
@@ -347,7 +347,7 @@ export default function Contact() {
                         href=" " 
                         className="font-medium text-gray-800 hover:text-blue-600 transition-colors line-clamp-2"
                       >
-                        Case Study: Big Growth for a Skincare D2C Indian Brand
+                        AI + Human Creativity: The Perfect Duo for 2025...
                       </a>
                       <p className="text-sm text-gray-500">July 16, 2024</p>
                     </div>

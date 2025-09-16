@@ -23,13 +23,13 @@ const Footer = () => {
             </p>
             {/* Social Icons */}
             <div className="mt-6 flex space-x-4">
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href=" https://www.linkedin.com/company/arhovasystems/about" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-blue-700 hover:text-blue-800 w-6 h-6" />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href=" https://www.instagram.com/arhovasystems" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-pink-500 hover:text-pink-600 w-6 h-6" />
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href=" https://www.facebook.com/profile.php?id=61579414833221" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-blue-600 hover:text-blue-700 w-6 h-6" />
               </a>
             </div>
@@ -41,8 +41,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-gray-600 hover:text-gray-900 transition">About Us</Link></li>
               <li><Link href="/blog" className="text-gray-600 hover:text-gray-900 transition">Blog</Link></li>
-              <li><Link href="/shop" className="text-gray-600 hover:text-gray-900 transition">Shop</Link></li>
               <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact Us</Link></li>
+              <li><Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-600 hover:text-gray-900 transition">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -50,10 +51,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><span className="text-gray-600">Retention Marketing</span></li>
-              <li><span className="text-gray-600">SEO & AI Optimisation</span></li>
-              <li><span className="text-gray-600">Performance Marketing & CRO</span></li>
-              <li><span className="text-gray-600">Software & Web Development</span></li>
+              <li><Link href="/web-development" className="text-gray-600">Web Development</Link></li>
+               <li><Link href="/crm-development" className="text-gray-600">CRM Development</Link></li>
+               <li><Link href="/digital-marketing" className="text-gray-600">Digital Marketing</Link></li>
+              <li><Link href="/seo-support" className="text-gray-600">SEO Support</Link></li>
             </ul>
           </div>
 
