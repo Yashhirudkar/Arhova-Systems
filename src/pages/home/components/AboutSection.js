@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center p-4">
       {/* Left Image */}
-      <div className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
+      {/* <div className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
         <Image
           src="/entertainer-presenting-tablet-from-sponsor-1.webp"
           alt="Left Image"
@@ -15,11 +15,11 @@ export default function AboutSection() {
           height={420}
           className="rounded-[200px] object-cover object-center w-[250px] h-[420px]"
         />
-      </div>
+      </div> */}
 
       {/* Middle Text */}
-      <div className="flex-1 text-center md:text-left px-4 md:px-10 md:ml-10">
-        <h1 className="text-3xl text-black font-bold mb-4">
+      <div className="flex-1 text-center justify-center md:text-left px-4 md:px-50 md:ml-10">
+        <h1 className="text-5xl text-black font-semibold mb-4">
           {heading}
         </h1>
         <p className="text-gray-700 mb-6">
@@ -37,11 +37,11 @@ export default function AboutSection() {
       {/* Right Image */}
       <div className="flex-1 flex justify-center md:justify-start mt-8 md:mt-0">
         <Image
-          src="/entertainer-presenting-tablet-from-sponsor-1.webp"
+          src="/home-image2.jpg"
           alt="Right Image"
           width={250}
-          height={420}
-          className="rounded-[200px] object-cover object-center w-[250px] h-[420px]"
+          height={400}
+          className="rounded-[50px] object-cover mt-5 object-center w-[250px] h-[400px]"
         />
       </div>
     </div>

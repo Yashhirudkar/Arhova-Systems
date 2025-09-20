@@ -87,9 +87,9 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/blog" className="text-black hover:text-purple-500 text-lg">
+          {/* <Link href="/blog" className="text-black hover:text-purple-500 text-lg">
             Blog
-          </Link>
+          </Link> */}
         </nav>
 
         {/* CTA (Desktop Only) */}
@@ -181,13 +181,13 @@ export default function Header() {
               )}
             </div>
 
-            <Link
+            {/* <Link
               href="/blog"
               className="text-black hover:text-purple-500 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Blog
-            </Link>
+            </Link> */}
             {/* <Link
               href="/shop"
               className="text-black hover:text-purple-500 text-lg"

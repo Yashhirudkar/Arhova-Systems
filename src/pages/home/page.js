@@ -16,8 +16,8 @@ export default function Home() {
         <PlatformsSection />
         <AboutSection />
         <ServicesSection />
-        <RecommendationsSection />
-        <BlogSection />
+        {/* <RecommendationsSection /> */}
+        {/* <BlogSection /> */}
         <CTASection />
       </div>
     </div>

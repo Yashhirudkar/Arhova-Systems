@@ -40,7 +40,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-gray-600 hover:text-gray-900 transition">About Us</Link></li>
-              <li><Link href="/blog" className="text-gray-600 hover:text-gray-900 transition">Blog</Link></li>
+              {/* <li><Link href="/blog" className="text-gray-600 hover:text-gray-900 transition">Blog</Link></li> */}
               <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact Us</Link></li>
               <li><Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-gray-600 hover:text-gray-900 transition">Terms & Conditions</Link></li>

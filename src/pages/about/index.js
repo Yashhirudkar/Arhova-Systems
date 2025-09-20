@@ -206,7 +206,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <LinkedInRecommendations />
+        {/* <LinkedInRecommendations /> */}
         <CTASection />
       </main>
     </div>
